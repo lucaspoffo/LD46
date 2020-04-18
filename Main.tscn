@@ -1,7 +1,25 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Interfaces/Timer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/BG_Temp.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Holo_Temp.png" type="Texture" id=3]
+[ext_resource path="res://Interfaces/ButtonPuzzle.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Node2D"]
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 963.359, 540.753 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 968.988, 537.348 )
+texture = ExtResource( 3 )
+
 [node name="Control" parent="." instance=ExtResource( 1 )]
+margin_left = 972.203
+margin_top = 133.759
+margin_right = 988.203
+margin_bottom = 147.759
+
+[node name="ButtonPuzzle" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1279.54, 619.439 )

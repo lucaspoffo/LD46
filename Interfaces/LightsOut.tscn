@@ -1,0 +1,123 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Interfaces/LightsOut.gd" type="Script" id=2]
+[ext_resource path="res://icon_red.png" type="Texture" id=3]
+
+[node name="LightsOut" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 76.1809
+margin_top = -2.72075
+margin_right = 140.181
+margin_bottom = 61.2793
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton3" type="TextureButton" parent="."]
+margin_left = 159.164
+margin_top = -1.36037
+margin_right = 223.164
+margin_bottom = 62.6396
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton6" type="TextureButton" parent="."]
+margin_left = -6.10352e-05
+margin_top = 74.8206
+margin_right = 63.9999
+margin_bottom = 138.821
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton5" type="TextureButton" parent="."]
+margin_left = 76.1809
+margin_top = 73.4602
+margin_right = 140.181
+margin_bottom = 137.46
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton4" type="TextureButton" parent="."]
+margin_left = 161.884
+margin_top = 76.181
+margin_right = 225.884
+margin_bottom = 140.181
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton7" type="TextureButton" parent="."]
+margin_left = 2.7207
+margin_top = 156.443
+margin_right = 66.7207
+margin_bottom = 220.443
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton8" type="TextureButton" parent="."]
+margin_left = 78.9016
+margin_top = 159.164
+margin_right = 142.902
+margin_bottom = 223.164
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton9" type="TextureButton" parent="."]
+margin_left = 161.884
+margin_top = 157.803
+margin_right = 225.884
+margin_bottom = 221.803
+toggle_mode = true
+pressed = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

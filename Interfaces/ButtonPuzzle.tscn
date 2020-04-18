@@ -1,39 +1,76 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Interfaces/ButtonPuzzle.gd" type="Script" id=2]
+[ext_resource path="res://icon_red.png" type="Texture" id=3]
 
 [node name="ButtonPuzzle" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Switchs" type="Node2D" parent="."]
 
-[node name="Switch" type="Sprite" parent="Switchs"]
-position = Vector2( -9.04401, 95.871 )
-texture = ExtResource( 1 )
-
-[node name="TextureButton" type="TextureButton" parent="Switchs/Switch"]
-margin_left = -14.3697
-margin_top = 49.6952
-margin_right = 25.6303
-margin_bottom = 89.6952
+[node name="Switch" type="TextureButton" parent="Switchs"]
+margin_left = 38.8039
+margin_top = 107.527
+margin_right = 102.804
+margin_bottom = 171.527
 toggle_mode = true
 texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Switch2" type="Sprite" parent="Switchs"]
-position = Vector2( 81.3964, 94.9624 )
-texture = ExtResource( 1 )
+[node name="Switch2" type="TextureButton" parent="Switchs"]
+margin_left = 125.965
+margin_top = 123.392
+margin_right = 189.965
+margin_bottom = 187.392
+toggle_mode = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Switch3" type="Sprite" parent="Switchs"]
-position = Vector2( 174.852, 94.9624 )
-texture = ExtResource( 1 )
+[node name="Switch3" type="TextureButton" parent="Switchs"]
+margin_left = 213.593
+margin_top = 145.006
+margin_right = 277.593
+margin_bottom = 209.006
+toggle_mode = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Switch4" type="Sprite" parent="Switchs"]
-position = Vector2( 265.292, 96.4698 )
-texture = ExtResource( 1 )
+[node name="Switch4" type="TextureButton" parent="Switchs"]
+margin_left = 301.679
+margin_top = 169.77
+margin_right = 365.679
+margin_bottom = 233.77
+toggle_mode = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Mesures" type="Node2D" parent="."]
+[node name="Switch5" type="TextureButton" parent="Switchs"]
+margin_left = 384.709
+margin_top = 201.357
+margin_right = 448.709
+margin_bottom = 265.357
+toggle_mode = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mesure1" type="Node2D" parent="."]
+position = Vector2( 182.772, 68.6972 )
+
+[node name="Mesure2" type="Node2D" parent="."]
+position = Vector2( 375.629, 139.285 )
