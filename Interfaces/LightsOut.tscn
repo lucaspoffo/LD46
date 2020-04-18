@@ -8,8 +8,10 @@
 script = ExtResource( 2 )
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = -9.52261
+margin_top = 29.9282
+margin_right = 54.4774
+margin_bottom = 93.9282
 toggle_mode = true
 pressed = true
 texture_normal = ExtResource( 1 )
@@ -19,10 +21,10 @@ __meta__ = {
 }
 
 [node name="TextureButton2" type="TextureButton" parent="."]
-margin_left = 76.1809
-margin_top = -2.72075
-margin_right = 140.181
-margin_bottom = 61.2793
+margin_left = 72.0998
+margin_top = 13.6037
+margin_right = 136.1
+margin_bottom = 77.6037
 toggle_mode = true
 pressed = true
 texture_normal = ExtResource( 1 )
@@ -32,10 +34,10 @@ __meta__ = {
 }
 
 [node name="TextureButton3" type="TextureButton" parent="."]
-margin_left = 159.164
-margin_top = -1.36037
-margin_right = 223.164
-margin_bottom = 62.6396
+margin_left = 152.362
+margin_top = -6.80188
+margin_right = 216.362
+margin_bottom = 57.1981
 toggle_mode = true
 pressed = true
 texture_normal = ExtResource( 1 )
@@ -45,10 +47,10 @@ __meta__ = {
 }
 
 [node name="TextureButton6" type="TextureButton" parent="."]
-margin_left = -6.10352e-05
-margin_top = 74.8206
-margin_right = 63.9999
-margin_bottom = 138.821
+margin_left = -9.52267
+margin_top = 116.992
+margin_right = 54.4773
+margin_bottom = 180.992
 toggle_mode = true
 pressed = true
 texture_normal = ExtResource( 1 )
@@ -58,10 +60,10 @@ __meta__ = {
 }
 
 [node name="TextureButton5" type="TextureButton" parent="."]
-margin_left = 76.1809
-margin_top = 73.4602
-margin_right = 140.181
-margin_bottom = 137.46
+margin_left = 72.0998
+margin_top = 89.7847
+margin_right = 136.1
+margin_bottom = 153.785
 toggle_mode = true
 pressed = true
 texture_normal = ExtResource( 1 )
@@ -71,10 +73,10 @@ __meta__ = {
 }
 
 [node name="TextureButton4" type="TextureButton" parent="."]
-margin_left = 161.884
-margin_top = 76.181
-margin_right = 225.884
-margin_bottom = 140.181
+margin_left = 153.722
+margin_top = 74.8206
+margin_right = 217.722
+margin_bottom = 138.821
 toggle_mode = true
 pressed = true
 texture_normal = ExtResource( 1 )
@@ -84,10 +86,10 @@ __meta__ = {
 }
 
 [node name="TextureButton7" type="TextureButton" parent="."]
-margin_left = 2.7207
-margin_top = 156.443
-margin_right = 66.7207
-margin_bottom = 220.443
+margin_left = -6.80194
+margin_top = 201.335
+margin_right = 57.1981
+margin_bottom = 265.335
 toggle_mode = true
 pressed = true
 texture_normal = ExtResource( 1 )
@@ -97,10 +99,10 @@ __meta__ = {
 }
 
 [node name="TextureButton8" type="TextureButton" parent="."]
-margin_left = 78.9016
-margin_top = 159.164
-margin_right = 142.902
-margin_bottom = 223.164
+margin_left = 74.8205
+margin_top = 175.488
+margin_right = 138.821
+margin_bottom = 239.488
 toggle_mode = true
 pressed = true
 texture_normal = ExtResource( 1 )
@@ -110,9 +112,9 @@ __meta__ = {
 }
 
 [node name="TextureButton9" type="TextureButton" parent="."]
-margin_left = 161.884
+margin_left = 156.443
 margin_top = 157.803
-margin_right = 225.884
+margin_right = 220.443
 margin_bottom = 221.803
 toggle_mode = true
 pressed = true
