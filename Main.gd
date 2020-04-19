@@ -17,8 +17,6 @@ func _ready():
 	start_puzzle([first_puzzle])
 
 func restart_expirement():
-	$AmpouleDisabled.visible = true
-	$AmpouleDisabled.visible = false
 	$ButtonPuzzle.visible = false
 	$LightsOut.visible = false
 	$ButtonPuzzle.init()
