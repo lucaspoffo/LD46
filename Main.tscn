@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Interfaces/Timer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/BG_Temp.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Holo_Temp.png" type="Texture" id=3]
 [ext_resource path="res://Interfaces/ButtonPuzzle.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Interfaces/LightsOut.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Interfaces/CentralPanel.tscn" type="PackedScene" id=6]
 
 [node name="Main" type="Node2D"]
 
@@ -12,9 +13,8 @@
 position = Vector2( 963.359, 540.753 )
 texture = ExtResource( 2 )
 
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 968.988, 537.348 )
-texture = ExtResource( 3 )
+[node name="CentralPanel" parent="Sprite" instance=ExtResource( 6 )]
+position = Vector2( -179.218, 346.747 )
 
 [node name="Sprite3" type="Sprite" parent="."]
 position = Vector2( 968.988, 537.348 )
@@ -24,11 +24,15 @@ flip_h = true
 [node name="LightsOut" parent="Sprite3" instance=ExtResource( 5 )]
 position = Vector2( -666.222, 64.2847 )
 
-[node name="Control" parent="." instance=ExtResource( 1 )]
-margin_left = 972.203
-margin_top = 133.759
-margin_right = 988.203
-margin_bottom = 147.759
+[node name="Timer" parent="." instance=ExtResource( 1 )]
+margin_left = 958.567
+margin_top = 872.058
+margin_right = 974.567
+margin_bottom = 886.058
 
 [node name="ButtonPuzzle" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1279.54, 619.439 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 968.988, 537.348 )
+texture = ExtResource( 3 )

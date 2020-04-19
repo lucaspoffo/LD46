@@ -3,3 +3,4 @@ extends Node
 signal timer_expired
 signal switch_puzzle_completed
 signal lightsout_puzzle_completed
+signal central_panel_submit(value)
