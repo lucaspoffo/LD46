@@ -1,76 +1,160 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Assets/BSquare_4.png" type="Texture" id=1]
 [ext_resource path="res://Interfaces/ButtonPuzzle.gd" type="Script" id=2]
-[ext_resource path="res://icon_red.png" type="Texture" id=3]
+[ext_resource path="res://Assets/RSquare_3.png" type="Texture" id=3]
+[ext_resource path="res://Assets/BSquare_5.png" type="Texture" id=4]
+[ext_resource path="res://Assets/RSquare_1.png" type="Texture" id=5]
+[ext_resource path="res://Assets/BSquare_3.png" type="Texture" id=6]
+[ext_resource path="res://Assets/RSquare_4.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Holo_Temp.png" type="Texture" id=8]
+[ext_resource path="res://Assets/BSquare_1.png" type="Texture" id=9]
+[ext_resource path="res://Assets/BSquare_2.png" type="Texture" id=10]
+[ext_resource path="res://Assets/RSquare_2.png" type="Texture" id=11]
+[ext_resource path="res://Assets/RSquare_5.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Clock_Temp.png" type="Texture" id=13]
+[ext_resource path="res://Assets/ClockRed_Temp.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Pointer_Temp.png" type="Texture" id=15]
 
 [node name="ButtonPuzzle" type="Node2D"]
 script = ExtResource( 2 )
 
+[node name="Hologram" type="Sprite" parent="."]
+position = Vector2( 271.33, 185.388 )
+texture = ExtResource( 8 )
+
 [node name="Switchs" type="Node2D" parent="."]
 
 [node name="Switch" type="TextureButton" parent="Switchs"]
-margin_left = 38.8039
-margin_top = 107.527
-margin_right = 102.804
-margin_bottom = 171.527
+margin_left = 10.2694
+margin_top = 118.307
+margin_right = 123.269
+margin_bottom = 245.307
 toggle_mode = true
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Switch2" type="TextureButton" parent="Switchs"]
-margin_left = 125.965
-margin_top = 123.392
-margin_right = 189.965
-margin_bottom = 187.392
+margin_left = 97.7792
+margin_top = 127.485
+margin_right = 210.779
+margin_bottom = 254.485
 toggle_mode = true
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Switch3" type="TextureButton" parent="Switchs"]
-margin_left = 213.593
-margin_top = 145.006
-margin_right = 277.593
-margin_bottom = 209.006
+margin_left = 196.655
+margin_top = 139.825
+margin_right = 309.655
+margin_bottom = 266.825
 toggle_mode = true
-texture_normal = ExtResource( 1 )
+texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Switch4" type="TextureButton" parent="Switchs"]
-margin_left = 301.679
-margin_top = 169.77
-margin_right = 365.679
-margin_bottom = 233.77
+margin_left = 304.575
+margin_top = 159.29
+margin_right = 417.575
+margin_bottom = 286.29
 toggle_mode = true
 texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
+texture_pressed = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Switch5" type="TextureButton" parent="Switchs"]
-margin_left = 384.709
-margin_top = 201.357
-margin_right = 448.709
-margin_bottom = 265.357
+margin_left = 413.403
+margin_top = 184.569
+margin_right = 526.403
+margin_bottom = 311.569
 toggle_mode = true
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Mesure1" type="Node2D" parent="."]
-position = Vector2( 182.772, 68.6972 )
+position = Vector2( 159.63, 77.2677 )
+rotation = 0.0698132
+
+[node name="Clock" type="Sprite" parent="Mesure1"]
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Origin" type="Node2D" parent="Mesure1"]
+position = Vector2( -1, 41 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Marker" type="Sprite" parent="Mesure1/Origin"]
+position = Vector2( 0.142609, -41 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Origin2" type="Node2D" parent="Mesure1"]
+position = Vector2( 0, 40.2966 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pointer" type="Sprite" parent="Mesure1/Origin2"]
+position = Vector2( -1.08069, -30.3828 )
+scale = Vector2( 1, 1.05895 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Mesure2" type="Node2D" parent="."]
-position = Vector2( 375.629, 139.285 )
+position = Vector2( 368.829, 104.704 )
+rotation = 0.10472
+
+[node name="Clock" type="Sprite" parent="Mesure2"]
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Origin" type="Node2D" parent="Mesure2"]
+position = Vector2( -1, 41 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Marker" type="Sprite" parent="Mesure2/Origin"]
+position = Vector2( 0.142609, -41 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Origin2" type="Node2D" parent="Mesure2"]
+position = Vector2( 0, 40.2966 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pointer" type="Sprite" parent="Mesure2/Origin2"]
+position = Vector2( -1.08069, -30.3828 )
+scale = Vector2( 1, 1.05895 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}

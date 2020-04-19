@@ -34,10 +34,6 @@ texture = ExtResource( 11 )
 position = Vector2( 961.261, 958.17 )
 texture = ExtResource( 8 )
 
-[node name="Holo" type="Sprite" parent="."]
-position = Vector2( 1529.98, 797.445 )
-texture = ExtResource( 3 )
-
 [node name="Holo2" type="Sprite" parent="."]
 position = Vector2( 389.45, 797.445 )
 texture = ExtResource( 3 )
