@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Assets/BSquare_4.png" type="Texture" id=1]
 [ext_resource path="res://Interfaces/ButtonPuzzle.gd" type="Script" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Assets/Clock_Temp.png" type="Texture" id=13]
 [ext_resource path="res://Assets/ClockRed_Temp.png" type="Texture" id=14]
 [ext_resource path="res://Assets/Pointer_Temp.png" type="Texture" id=15]
+[ext_resource path="res://Fonts/Exo_60.tres" type="DynamicFont" id=16]
 
 [node name="ButtonPuzzle" type="Node2D"]
 script = ExtResource( 2 )
@@ -31,6 +32,7 @@ margin_top = 118.307
 margin_right = 123.269
 margin_bottom = 245.307
 toggle_mode = true
+pressed = true
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 5 )
 __meta__ = {
@@ -110,17 +112,11 @@ __meta__ = {
 
 [node name="Origin2" type="Node2D" parent="Mesure1"]
 position = Vector2( 0, 40.2966 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Pointer" type="Sprite" parent="Mesure1/Origin2"]
 position = Vector2( -1.08069, -30.3828 )
 scale = Vector2( 1, 1.05895 )
 texture = ExtResource( 15 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Mesure2" type="Node2D" parent="."]
 position = Vector2( 368.829, 104.704 )
@@ -157,4 +153,14 @@ scale = Vector2( 1, 1.05895 )
 texture = ExtResource( 15 )
 __meta__ = {
 "_edit_lock_": true
+}
+
+[node name="Solution" type="Label" parent="."]
+margin_left = 42.3383
+margin_top = -74.4293
+margin_right = 185.338
+margin_bottom = -2.42926
+custom_fonts/font = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
 }

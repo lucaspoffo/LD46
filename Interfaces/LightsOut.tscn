@@ -1,125 +1,150 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Puzzle2/Bs32.png" type="Texture" id=1]
 [ext_resource path="res://Interfaces/LightsOut.gd" type="Script" id=2]
-[ext_resource path="res://icon_red.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Holo_Temp.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Puzzle2/Bs12.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Puzzle2/Rs11.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Puzzle2/Bs13.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Puzzle2/Bs11.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Puzzle2/Rs23.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Puzzle2/Bs33.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Puzzle2/Bs22.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Puzzle2/Bs21.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Puzzle2/Rs32.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Puzzle2/Bs31.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Puzzle2/Rs31.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Puzzle2/Rs12.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Puzzle2/Rs21.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Puzzle2/Bs23.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Puzzle2/Rs22.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Puzzle2/Rs13.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Puzzle2/Rs33.png" type="Texture" id=20]
 
 [node name="LightsOut" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="TextureButton" type="TextureButton" parent="."]
-margin_left = -9.52261
-margin_top = 29.9282
-margin_right = 54.4774
-margin_bottom = 93.9282
+[node name="Hologram" type="Sprite" parent="."]
+position = Vector2( 108.83, 182.29 )
+texture = ExtResource( 3 )
+flip_h = true
+
+[node name="Buttons" type="Node2D" parent="."]
+position = Vector2( 26.0642, -1.62901 )
+
+[node name="TextureButton" type="TextureButton" parent="Buttons"]
+margin_left = -8.37099
+margin_top = 42.1458
+margin_right = 59.629
+margin_bottom = 110.146
 toggle_mode = true
 pressed = true
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton2" type="TextureButton" parent="."]
-margin_left = 72.0998
-margin_top = 13.6037
-margin_right = 136.1
-margin_bottom = 77.6037
+[node name="TextureButton2" type="TextureButton" parent="Buttons"]
+margin_left = 75.0
+margin_top = 35.5954
+margin_right = 143.0
+margin_bottom = 103.595
 toggle_mode = true
 pressed = true
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 15 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton3" type="TextureButton" parent="."]
-margin_left = 152.362
-margin_top = -6.80188
-margin_right = 216.362
-margin_bottom = 57.1981
+[node name="TextureButton3" type="TextureButton" parent="Buttons"]
+margin_left = 151.676
+margin_top = 33.0
+margin_right = 219.676
+margin_bottom = 101.0
 toggle_mode = true
 pressed = true
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 19 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton6" type="TextureButton" parent="."]
-margin_left = -9.52267
-margin_top = 116.992
-margin_right = 54.4773
-margin_bottom = 180.992
+[node name="TextureButton6" type="TextureButton" parent="Buttons"]
+margin_left = -8.37099
+margin_top = 121.065
+margin_right = 59.629
+margin_bottom = 189.065
 toggle_mode = true
 pressed = true
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 16 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton5" type="TextureButton" parent="."]
-margin_left = 72.0998
-margin_top = 89.7847
-margin_right = 136.1
-margin_bottom = 153.785
+[node name="TextureButton5" type="TextureButton" parent="Buttons"]
+margin_left = 75.0
+margin_top = 114.22
+margin_right = 143.0
+margin_bottom = 182.22
 toggle_mode = true
 pressed = true
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 18 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton4" type="TextureButton" parent="."]
-margin_left = 153.722
-margin_top = 74.8206
-margin_right = 217.722
-margin_bottom = 138.821
+[node name="TextureButton4" type="TextureButton" parent="Buttons"]
+margin_left = 151.676
+margin_top = 103.328
+margin_right = 219.676
+margin_bottom = 171.328
 toggle_mode = true
 pressed = true
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton7" type="TextureButton" parent="."]
-margin_left = -6.80194
-margin_top = 201.335
-margin_right = 57.1981
-margin_bottom = 265.335
+[node name="TextureButton7" type="TextureButton" parent="Buttons"]
+margin_left = -8.37099
+margin_top = 198.892
+margin_right = 59.629
+margin_bottom = 266.892
 toggle_mode = true
 pressed = true
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton8" type="TextureButton" parent="."]
-margin_left = 74.8205
-margin_top = 175.488
-margin_right = 138.821
-margin_bottom = 239.488
+[node name="TextureButton8" type="TextureButton" parent="Buttons"]
+margin_left = 75.0
+margin_top = 185.262
+margin_right = 143.0
+margin_bottom = 253.262
 toggle_mode = true
 pressed = true
 texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
+texture_pressed = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureButton9" type="TextureButton" parent="."]
-margin_left = 156.443
-margin_top = 157.803
-margin_right = 220.443
-margin_bottom = 221.803
+[node name="TextureButton9" type="TextureButton" parent="Buttons"]
+margin_left = 151.676
+margin_top = 173.279
+margin_right = 219.676
+margin_bottom = 241.279
 toggle_mode = true
 pressed = true
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 3 )
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -6,14 +6,24 @@ var _min_values := [0, 0]
 var _max_values := [0, 0]
 var _measure_len = 50
 var _desired_values = [0, 0]
-
+var solution = []
 onready var _measure_pos := [$Mesure1.position, $Mesure2.position]
 onready var _markers := [$Mesure1/Origin, $Mesure2/Origin]
 onready var _pointers := [$Mesure1/Origin2, $Mesure2/Origin2]
 onready var _switchs: Array = $Switchs.get_children()
 
 func _ready():
+	init()
+
+func init():
 	randomize()
+	_values = [0, 0]
+	_min_values = [0, 0]
+	_max_values = [0, 0]
+	_desired_values = [0, 0]
+	
+	solution = []
+	
 	for i in range(_switchs.size()):
 		_switchs[i].connect("toggled", self, "_update_state")
 		var switch_value = [0, 0]
@@ -35,6 +45,9 @@ func _ready():
 		if randi() % 2 == 0:
 			_desired_values[0] += switch_value[0]
 			_desired_values[1] += switch_value[1]
+			solution.push_back(1)
+		else:
+			solution.push_back(0)
 			
 	# Treat case when no button was selected in solution
 	if _desired_values[0] == 0 && _desired_values[1] == 0:
@@ -44,7 +57,10 @@ func _ready():
 	
 	_markers[0].rotation = get_angle(_desired_values[0], 0)
 	_markers[1].rotation = get_angle(_desired_values[1], 1)
-	
+	set_buttons_pressed(false)
+	set_buttons_disabled(false)
+	_update_state(false)
+	$Solution.text = str(solution)
 
 func _update_state(_toggled):
 	_values = [0, 0]
@@ -56,34 +72,24 @@ func _update_state(_toggled):
 	if _values[0] == _desired_values[0] && _values[1] == _desired_values[1]:
 		Event.emit_signal("switch_puzzle_completed")
 		print("completed switch puzzle")
-	
-	
-#func _draw():
-#	draw_measure(0)
-#	draw_measure(1)
+		set_buttons_disabled(true)
+
+func set_buttons_pressed(pressed: bool):
+	for s in _switchs:
+		s.pressed = pressed
+		
+func set_buttons_disabled(disabled: bool):
+	for s in _switchs:
+		s.disabled = disabled
+
 func get_angle(value, i):
-	var start_arc = -PI * .9
-	var end_arc =  -PI * .1
+	var start_arc = -PI * .4
+	var end_arc =  PI * .4
 	var arc_angle = PI * .8
 	var phi = float(value - _min_values[i]) / (_max_values[i] - _min_values[i])
-	return phi
+	return start_arc + phi * arc_angle
 
 func update_pointers():
 	_pointers[0].rotation = get_angle(_values[0], 0)
 	_pointers[1].rotation = get_angle(_values[1], 1)
 
-#func draw_measure(i):
-#	var start_arc = -PI * .9
-#	var end_arc =  -PI * .1
-#	var arc_angle = PI * .8
-#	var phi = float(_values[i] - _min_values[i]) / (_max_values[i] - _min_values[i])
-#	var to = start_arc + arc_angle * phi
-#
-#	draw_line(_measure_pos[i], _measure_pos[i] + to, Color.red, 3)
-#	draw_arc(_measure_pos[i], _measure_len, start_arc, end_arc, 24, Color.white, 3)
-#
-#	var desired_phi = float(_desired_values[i] - _min_values[i]) / (_max_values[i] - _min_values[i])
-#
-#	var desired_start_arc = start_arc + arc_angle * desired_phi - PI/24
-#	var desired_end_arc = start_arc + arc_angle * desired_phi + PI/24
-#	draw_arc(_measure_pos[i], _measure_len, desired_start_arc, desired_end_arc, 24, Color.red, 3)
