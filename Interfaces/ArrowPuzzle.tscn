@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Interfaces/ArrowPuzzle.gd" type="Script" id=2]
+[ext_resource path="res://Interfaces/Arrow.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icon_red.png" type="Texture" id=4]
+
+[node name="ArrowPuzzle" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Arrows" type="Node2D" parent="."]
+
+[node name="Arrow" parent="Arrows" instance=ExtResource( 3 )]
+position = Vector2( 196.036, 47.8204 )
+
+[node name="Arrow2" parent="Arrows" instance=ExtResource( 3 )]
+position = Vector2( 286.286, 47.8204 )
+
+[node name="Arrow3" parent="Arrows" instance=ExtResource( 3 )]
+position = Vector2( 375.633, 46.9179 )
+
+[node name="Arrow4" parent="Arrows" instance=ExtResource( 3 )]
+position = Vector2( 195.133, 135.363 )
+
+[node name="Arrow5" parent="Arrows" instance=ExtResource( 3 )]
+position = Vector2( 287.188, 131.753 )
+
+[node name="Arrow6" parent="Arrows" instance=ExtResource( 3 )]
+position = Vector2( 377.438, 131.753 )
+
+[node name="Arrow7" parent="Arrows" instance=ExtResource( 3 )]
+position = Vector2( 196.036, 219.295 )
+
+[node name="Arrow8" parent="Arrows" instance=ExtResource( 3 )]
+position = Vector2( 288.091, 217.49 )
+
+[node name="Arrow9" parent="Arrows" instance=ExtResource( 3 )]
+position = Vector2( 379.243, 212.978 )
+
+[node name="GenerateLevel" type="TextureButton" parent="."]
+visible = false
+margin_left = 108.258
+margin_top = 279.4
+margin_right = 172.258
+margin_bottom = 343.4
+disabled = true
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Red" type="TextureButton" parent="."]
+margin_left = 37.3233
+margin_top = 23.327
+margin_right = 101.323
+margin_bottom = 87.327
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Green" type="TextureButton" parent="."]
+margin_left = 38.4896
+margin_top = 102.639
+margin_right = 102.49
+margin_bottom = 166.639
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Blue" type="TextureButton" parent="."]
+margin_left = 38.9489
+margin_top = 189.815
+margin_right = 102.949
+margin_bottom = 253.815
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="GenerateLevel" to="." method="_on_GenerateLevel_pressed"]
+[connection signal="pressed" from="Red" to="." method="_on_Red_pressed"]
+[connection signal="pressed" from="Green" to="." method="_on_Green_pressed"]
+[connection signal="pressed" from="Blue" to="." method="_on_Blue_pressed"]

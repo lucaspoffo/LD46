@@ -5,3 +5,4 @@ signal switch_puzzle_completed
 signal lightsout_puzzle_completed
 signal central_panel_submit(value)
 signal ampole_error
+signal arrow_puzzle_completed

@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Sprite",
+"class": "Arrow",
+"language": "GDScript",
+"path": "res://Interfaces/Arrow.gd"
+} ]
 _global_script_class_icons={
-
+"Arrow": ""
 }
 
 [application]
@@ -21,7 +26,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Event="*res://Event.tscn"
+Event="*res://Event.gd"
 
 [display]
 
