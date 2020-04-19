@@ -21,4 +21,3 @@ func _on_TextureButton2_pressed():
 
 func _on_Submit_pressed():
 	Event.emit_signal("central_panel_submit", v1 * 10 + v2)
-

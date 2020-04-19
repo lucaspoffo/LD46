@@ -13,22 +13,19 @@
 position = Vector2( 963.359, 540.753 )
 texture = ExtResource( 2 )
 
-[node name="CentralPanel" parent="Sprite" instance=ExtResource( 6 )]
-position = Vector2( -179.218, 346.747 )
-
 [node name="Sprite3" type="Sprite" parent="."]
 position = Vector2( 968.988, 537.348 )
 texture = ExtResource( 3 )
 flip_h = true
 
-[node name="LightsOut" parent="Sprite3" instance=ExtResource( 5 )]
-position = Vector2( -666.222, 64.2847 )
+[node name="LightsOut" parent="." instance=ExtResource( 5 )]
+position = Vector2( 302.765, 601.632 )
+
+[node name="CentralPanel" parent="." instance=ExtResource( 6 )]
+position = Vector2( 775.549, 914.75 )
 
 [node name="Timer" parent="." instance=ExtResource( 1 )]
-margin_left = 958.567
-margin_top = 872.058
-margin_right = 974.567
-margin_bottom = 886.058
+position = Vector2( 721.361, 778.56 )
 
 [node name="ButtonPuzzle" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1279.54, 619.439 )

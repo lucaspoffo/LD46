@@ -1,16 +1,51 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Interfaces/Timer.gd" type="Script" id=1]
+[ext_resource path="res://Interfaces/Ampoule.tscn" type="PackedScene" id=2]
 
-[node name="TimerLabel" type="Label"]
+[node name="Timer" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="TimerLabel" type="Label" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 236.741
+margin_top = 125.774
+margin_right = 252.741
+margin_bottom = 139.774
 text = "60"
-script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Timer" type="Timer" parent="."]
-autostart = true
+[node name="Ampoule" parent="." instance=ExtResource( 2 )]
+margin_left = 30.1367
+margin_top = 73.3056
+margin_right = 94.1367
+margin_bottom = 137.306
+
+[node name="Ampoule2" parent="." instance=ExtResource( 2 )]
+margin_left = 124.619
+margin_top = 51.3139
+margin_right = 188.619
+margin_bottom = 115.314
+
+[node name="Ampoule3" parent="." instance=ExtResource( 2 )]
+margin_left = 282.634
+margin_top = 45.6124
+margin_right = 346.634
+margin_bottom = 109.612
+
+[node name="Ampoule4" parent="." instance=ExtResource( 2 )]
+margin_left = 386.076
+margin_top = 78.1926
+margin_right = 450.076
+margin_bottom = 142.193
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="Ampoule" to="." method="_on_Ampoule_pressed"]
+[connection signal="pressed" from="Ampoule2" to="." method="_on_Ampoule_pressed"]
+[connection signal="pressed" from="Ampoule3" to="." method="_on_Ampoule_pressed"]
+[connection signal="pressed" from="Ampoule4" to="." method="_on_Ampoule_pressed"]
