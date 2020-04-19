@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Interfaces/Timer.gd" type="Script" id=1]
 [ext_resource path="res://Interfaces/Ampoule.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Interfaces/HologramLabel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Timer_Temp.png" type="Texture" id=4]
+[ext_resource path="res://Assets/InjecaoVazia_Temp.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Injecao_Temp.png" type="Texture" id=6]
 
 [node name="Timer" type="Node2D"]
 script = ExtResource( 1 )
@@ -9,41 +13,49 @@ script = ExtResource( 1 )
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="TimerLabel" type="Label" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 236.741
-margin_top = 125.774
-margin_right = 252.741
-margin_bottom = 139.774
-text = "60"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="TimerLabel" parent="." instance=ExtResource( 3 )]
+margin_left = -80.1062
+margin_top = -110.453
+margin_right = 87.8938
+margin_bottom = -29.453
+text = "00:00"
 
 [node name="Ampoule" parent="." instance=ExtResource( 2 )]
-margin_left = 30.1367
-margin_top = 73.3056
-margin_right = 94.1367
-margin_bottom = 137.306
+margin_left = -308.378
+margin_top = -131.04
+margin_right = -209.378
+margin_bottom = 7.95984
+texture_normal = ExtResource( 6 )
+texture_disabled = ExtResource( 5 )
 
 [node name="Ampoule2" parent="." instance=ExtResource( 2 )]
-margin_left = 124.619
-margin_top = 51.3139
-margin_right = 188.619
-margin_bottom = 115.314
+margin_left = -207.24
+margin_top = -150.689
+margin_right = -108.24
+margin_bottom = -11.6888
+texture_normal = ExtResource( 6 )
+texture_disabled = ExtResource( 5 )
 
 [node name="Ampoule3" parent="." instance=ExtResource( 2 )]
-margin_left = 282.634
-margin_top = 45.6124
-margin_right = 346.634
-margin_bottom = 109.612
+margin_left = 102.353
+margin_top = -151.127
+margin_right = 201.353
+margin_bottom = -12.1271
+texture_normal = ExtResource( 6 )
+texture_disabled = ExtResource( 5 )
 
 [node name="Ampoule4" parent="." instance=ExtResource( 2 )]
-margin_left = 386.076
-margin_top = 78.1926
-margin_right = 450.076
-margin_bottom = 142.193
+margin_left = 198.282
+margin_top = -130.049
+margin_right = 297.282
+margin_bottom = 8.95059
+texture_normal = ExtResource( 6 )
+texture_disabled = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1.23398, -30.1421 )
+scale = Vector2( 1.1529, 1.04267 )
+texture = ExtResource( 4 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="Ampoule" to="." method="_on_Ampoule_pressed"]
 [connection signal="pressed" from="Ampoule2" to="." method="_on_Ampoule_pressed"]

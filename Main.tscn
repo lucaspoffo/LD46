@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Interfaces/Timer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/BG_Temp.png" type="Texture" id=2]
@@ -6,30 +6,51 @@
 [ext_resource path="res://Interfaces/ButtonPuzzle.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Interfaces/LightsOut.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Interfaces/CentralPanel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Capsula_Temp.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Painel_Temp.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Triangle_Temp.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Base_Temp.png" type="Texture" id=10]
 
 [node name="Main" type="Node2D"]
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Background" type="Sprite" parent="."]
 position = Vector2( 963.359, 540.753 )
 texture = ExtResource( 2 )
 
-[node name="Sprite3" type="Sprite" parent="."]
-position = Vector2( 968.988, 537.348 )
+[node name="Capsule" type="Sprite" parent="."]
+position = Vector2( 960, 412.264 )
+texture = ExtResource( 7 )
+
+[node name="Base" type="Sprite" parent="Capsule"]
+show_behind_parent = true
+position = Vector2( -107.419, 383.947 )
+texture = ExtResource( 10 )
+
+[node name="Panel" type="Sprite" parent="."]
+position = Vector2( 961.261, 958.17 )
+texture = ExtResource( 8 )
+
+[node name="Holo" type="Sprite" parent="."]
+position = Vector2( 1529.98, 797.445 )
+texture = ExtResource( 3 )
+
+[node name="Holo2" type="Sprite" parent="."]
+position = Vector2( 389.45, 797.445 )
 texture = ExtResource( 3 )
 flip_h = true
 
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 968.988, 537.348 )
-texture = ExtResource( 3 )
+[node name="Triangle" type="Sprite" parent="."]
+position = Vector2( 960, 765.501 )
+texture = ExtResource( 9 )
 
 [node name="LightsOut" parent="." instance=ExtResource( 5 )]
 position = Vector2( 302.765, 601.632 )
 
-[node name="CentralPanel" parent="." instance=ExtResource( 6 )]
-position = Vector2( 775.549, 914.75 )
-
 [node name="Timer" parent="." instance=ExtResource( 1 )]
-position = Vector2( 721.361, 778.56 )
+position = Vector2( 960.664, 919.809 )
+
+[node name="CentralPanel" parent="." instance=ExtResource( 6 )]
+position = Vector2( 960, 957.619 )
 
 [node name="ButtonPuzzle" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1279.54, 619.439 )
