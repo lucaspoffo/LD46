@@ -18,6 +18,10 @@ position = Vector2( 968.988, 537.348 )
 texture = ExtResource( 3 )
 flip_h = true
 
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 968.988, 537.348 )
+texture = ExtResource( 3 )
+
 [node name="LightsOut" parent="." instance=ExtResource( 5 )]
 position = Vector2( 302.765, 601.632 )
 
@@ -29,7 +33,3 @@ position = Vector2( 721.361, 778.56 )
 
 [node name="ButtonPuzzle" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1279.54, 619.439 )
-
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 968.988, 537.348 )
-texture = ExtResource( 3 )
