@@ -1,6 +1,6 @@
 extends Node2D
 
-var _seconds := 15
+var _seconds := 60
 
 func _ready():
 	_updateLabel()
@@ -13,7 +13,7 @@ func _on_Timer_timeout():
 		Event.emit_signal("timer_expired")
 
 func _updateLabel():
-	$TimerLabel.text = "00:" + String(_seconds)
+	$TimerLabel.text = "00:%02d" % _seconds
 	
 func _on_Ampoule_pressed():
 	if _seconds <= 10:
