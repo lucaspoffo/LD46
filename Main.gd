@@ -30,18 +30,17 @@ func _ready():
 	yield(get_tree().create_timer(2.0), "timeout")
 	$AnimationPlayer.play("Movement_in")
 	yield($AnimationPlayer, "animation_finished")
-	#$Light2D/AnimationPlayer.play("Light_Blink")
+	$Timer.set_ampoules_disabled(false)
+	$Light2D/AnimationPlayer.play("Light_Blink")
 	start_puzzle([first_puzzle])
 
 func restart_expirement():
+	Event.emit_signal("experiment_failed")
+	print("asdsad")
+	$Fib/FibSubmit.disabled = true
+	$Fib/FibSubmit2.disabled = true
 	$ButtonPuzzle.visible = false
 	$LightsOut.visible = false
-	
-	$FibSubmit.disabled = false
-	$FibSubmit2.disabled = false
-	
-	$CentralPanel.set_binary_disabled(false)
-	$CentralPanel.set_triangle_disabled(false)
 	
 	$ButtonPuzzle.init()
 	$LightsOut.init()
@@ -63,8 +62,6 @@ func restart_expirement():
 	$AnimationPlayer.play("Movement")
 	yield($AnimationPlayer, "animation_finished")
 	yield(get_tree().create_timer(1.0), "timeout")
-	
-	
 
 	$AnimationPlayer.play("Movement_in")
 	$Light2D.color = Color.white
@@ -73,6 +70,8 @@ func restart_expirement():
 	$Light2D/AnimationPlayer.play("Light_Blink")
 
 	Event.emit_signal("restart_experiment")
+	$Fib/FibSubmit.disabled = false
+	$Fib/FibSubmit2.disabled = false
 	expiriment_number += 1
 	$ExpirimentLabel.text = str(expiriment_number)
 	start_puzzle([first_puzzle])
@@ -112,8 +111,8 @@ func _on_FibSubmit_pressed():
 		current_fib = 0
 		Event.emit_signal("error_submit")
 	if current_fib == fib_sequence.size():
-		$FibSubmit.disabled = true
-		$FibSubmit2.disabled = true
+		$Fib/FibSubmit.disabled = true
+		$Fib/FibSubmit2.disabled = true
 		evolve()
 		print("Fibonacci sequence submited")
 

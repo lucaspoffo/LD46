@@ -73,6 +73,8 @@ func _update_state(_toggled):
 		Event.emit_signal("switch_puzzle_completed")
 		print("completed switch puzzle")
 		set_buttons_disabled(true)
+		yield(get_tree().create_timer(1.0), "timeout")
+		visible = false
 
 func set_buttons_pressed(pressed: bool):
 	for s in _switchs:

@@ -5,9 +5,11 @@ var _ampoules
 var can_inject := false
 export var enabled_indicator: Texture
 export var disabled_indicator: Texture
+var already_error = false
 
 func _ready():
 	_ampoules = $Ampoules.get_children()
+	set_ampoules_disabled(true)
 	for a in _ampoules:
 		a.connect("ampoule_pressed", self, "_on_Ampoule_pressed", [a])
 	Event.connect("error_submit", self, "_on_Error_Submit")
@@ -18,13 +20,17 @@ func _ready():
 
 func _on_Restart():
 	_seconds = 60
+	already_error = false
 	$Timer.start()
 	_updateLabel()
 	set_injectable(false)
 	_check_timer_indicator()
 	#TODO: play animation
+	set_ampoules_disabled(false)
+
+func set_ampoules_disabled(disabled: bool):
 	for a in _ampoules:
-		a.disabled = false
+		a.disabled = disabled
 
 func _on_Error_Submit():
 	_seconds -= 5
@@ -46,18 +52,20 @@ func _checkTimerExpired():
 		$TimerLabel.text = "--:--"
 
 func _ampouleError():
-	Event.emit_signal("ampoule_error")
-	$Timer.stop()
-	$TimerLabel.text = "--:--"
+	if !already_error:
+		Event.emit_signal("ampoule_error")
+		$Timer.stop()
+		$TimerLabel.text = "--:--"
+		already_error = true
 
 func _updateLabel():
 	$TimerLabel.text = "00:%02d" % _seconds
 
 func _on_Ampoule_pressed(ampoule):
-	if !can_inject:
-		#TODO: play error sound
-		return
 	ampoule.disabled = true
+	if !can_inject:
+		_ampouleError()
+		return
 	if _seconds <= 10:
 		_seconds = 60
 		_updateLabel()

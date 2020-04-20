@@ -53,6 +53,8 @@ func _check_win():
 		set_buttons_disabled(true)
 		Event.emit_signal("lightsout_puzzle_completed")
 		print("completed lights out puzzle")
+		yield(get_tree().create_timer(1.0), "timeout")
+		visible = false
 
 func set_buttons_disabled(disabled: bool):
 	for s in lights:
