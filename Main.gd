@@ -12,10 +12,11 @@ var fib_sequence = [0, 1, 1, 2, 3, 5, 8]
 var current_fib = 0
 
 var stage = 0
-var stageAnimation := {
-	1: "stage_1",
-	2: "stage_2",
-	3: "stage_3",
+var stage_animation := {
+	0: "baby",
+	1: "pickleman",
+	2: "default",
+	3: "bombado"
 }
 
 func _ready():
@@ -30,13 +31,14 @@ func _ready():
 	yield(get_tree().create_timer(2.0), "timeout")
 	$AnimationPlayer.play("Movement_in")
 	yield($AnimationPlayer, "animation_finished")
-	$Timer.set_ampoules_disabled(false)
 	$Light2D/AnimationPlayer.play("Light_Blink")
 	start_puzzle([first_puzzle])
+	yield(get_tree().create_timer(3.0), "timeout")
+	$Timer.set_ampoules_disabled(false)
 
 func restart_expirement():
 	Event.emit_signal("experiment_failed")
-	print("asdsad")
+	
 	$Fib/FibSubmit.disabled = true
 	$Fib/FibSubmit2.disabled = true
 	$ButtonPuzzle.visible = false
@@ -62,7 +64,9 @@ func restart_expirement():
 	$AnimationPlayer.play("Movement")
 	yield($AnimationPlayer, "animation_finished")
 	yield(get_tree().create_timer(1.0), "timeout")
-
+	
+	$Capsula/Gosma/Alien.play(stage_animation[0])
+	
 	$AnimationPlayer.play("Movement_in")
 	$Light2D.color = Color.white
 	$Capsula/Gosma.modulate = Color.white
@@ -136,9 +140,18 @@ func _on_BinarySubmit(value):
 func evolve():
 	stage += 1
 	print("evolving to stage: ", stage)
+	$Capsula/Gosma/BubblesEvolvolution/AnimationPlayer.play("Transform")
 	#TODO play transformation animation
-	if stage == 4:
+	if stage == 5:
 		# Disable all inputs and stop timer
 		$Timer/Timer.stop()
 		get_viewport().gui_disable_input = true
 		#TODO: Play end animation
+
+func change_experiment_animation():
+	if stage_animation.get(stage):
+		$Capsula/Gosma/Alien.play(stage_animation[stage])
+	else:
+		$Capsula/Gosma/Alien.play(stage_animation[4])
+		$End/EndGameAnimation/AnimationPlayer.play("End")
+		$"/root/Music".stop()

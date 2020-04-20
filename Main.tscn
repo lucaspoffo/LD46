@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=230 format=2]
 
 [ext_resource path="res://Interfaces/Timer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Particles/Bubble3.png" type="Texture" id=2]
@@ -68,6 +68,157 @@
 [ext_resource path="res://Assets/Geral/LIGHT_2.png" type="Texture" id=66]
 [ext_resource path="res://Assets/Geral/PLATFORM_B.png" type="Texture" id=67]
 [ext_resource path="res://Assets/Geral/PLATFORM_F.png" type="Texture" id=68]
+[ext_resource path="res://Assets/Baby/Baby21.png" type="Texture" id=69]
+[ext_resource path="res://Assets/Bombado/Bombado03.png" type="Texture" id=70]
+[ext_resource path="res://Assets/Baby/Baby36.png" type="Texture" id=71]
+[ext_resource path="res://Assets/Baby/Baby29.png" type="Texture" id=72]
+[ext_resource path="res://Assets/Baby/Baby25.png" type="Texture" id=73]
+[ext_resource path="res://Assets/Baby/Baby16.png" type="Texture" id=74]
+[ext_resource path="res://Assets/Baby/Baby15.png" type="Texture" id=75]
+[ext_resource path="res://Assets/Baby/Baby26.png" type="Texture" id=76]
+[ext_resource path="res://Assets/Pickleman/PickleMan01.png" type="Texture" id=77]
+[ext_resource path="res://Assets/Pickleman/PickleMan02.png" type="Texture" id=78]
+[ext_resource path="res://Assets/Baby/Baby28.png" type="Texture" id=79]
+[ext_resource path="res://Assets/Baby/Baby02.png" type="Texture" id=80]
+[ext_resource path="res://Assets/Baby/Baby09.png" type="Texture" id=81]
+[ext_resource path="res://Assets/Baby/Baby12.png" type="Texture" id=82]
+[ext_resource path="res://Assets/Baby/Baby17.png" type="Texture" id=83]
+[ext_resource path="res://Assets/Bombado/Bombado14.png" type="Texture" id=84]
+[ext_resource path="res://Assets/Bombado/Bombado22.png" type="Texture" id=85]
+[ext_resource path="res://Assets/Bombado/Bombado21.png" type="Texture" id=86]
+[ext_resource path="res://Assets/Bombado/Bombado46.png" type="Texture" id=87]
+[ext_resource path="res://Assets/Bombado/Bombado47.png" type="Texture" id=88]
+[ext_resource path="res://Assets/Baby/Baby27.png" type="Texture" id=89]
+[ext_resource path="res://Assets/Baby/Baby23.png" type="Texture" id=90]
+[ext_resource path="res://Assets/Baby/Baby30.png" type="Texture" id=91]
+[ext_resource path="res://Assets/Pickleman/PickleMan07.png" type="Texture" id=92]
+[ext_resource path="res://Assets/Pickleman/PickleMan00.png" type="Texture" id=93]
+[ext_resource path="res://Assets/Baby/Baby03.png" type="Texture" id=94]
+[ext_resource path="res://Assets/Baby/Baby13.png" type="Texture" id=95]
+[ext_resource path="res://Assets/Baby/Baby08.png" type="Texture" id=96]
+[ext_resource path="res://Assets/Baby/Baby11.png" type="Texture" id=97]
+[ext_resource path="res://Assets/Baby/Baby34.png" type="Texture" id=98]
+[ext_resource path="res://Assets/Baby/Baby04.png" type="Texture" id=99]
+[ext_resource path="res://Assets/Pickleman/PickleMan17.png" type="Texture" id=100]
+[ext_resource path="res://Assets/Baby/Baby47.png" type="Texture" id=101]
+[ext_resource path="res://Assets/Pickleman/PickleMan29.png" type="Texture" id=102]
+[ext_resource path="res://Assets/Pickleman/PickleMan28.png" type="Texture" id=103]
+[ext_resource path="res://Assets/Baby/Baby44.png" type="Texture" id=104]
+[ext_resource path="res://Assets/Pickleman/PickleMan41.png" type="Texture" id=105]
+[ext_resource path="res://Assets/Baby/Baby37.png" type="Texture" id=106]
+[ext_resource path="res://Assets/Pickleman/PickleMan19.png" type="Texture" id=107]
+[ext_resource path="res://Assets/Baby/Baby31.png" type="Texture" id=108]
+[ext_resource path="res://Assets/Bombado/Bombado10.png" type="Texture" id=109]
+[ext_resource path="res://Assets/Pickleman/PickleMan12.png" type="Texture" id=110]
+[ext_resource path="res://Assets/Bombado/Bombado06.png" type="Texture" id=111]
+[ext_resource path="res://Assets/Bombado/Bombado07.png" type="Texture" id=112]
+[ext_resource path="res://Assets/Pickleman/PickleMan47.png" type="Texture" id=113]
+[ext_resource path="res://Assets/Pickleman/PickleMan16.png" type="Texture" id=114]
+[ext_resource path="res://Assets/Baby/Baby38.png" type="Texture" id=115]
+[ext_resource path="res://Assets/Bombado/Bombado08.png" type="Texture" id=116]
+[ext_resource path="res://Assets/Bombado/Bombado18.png" type="Texture" id=117]
+[ext_resource path="res://Assets/Bombado/Bombado19.png" type="Texture" id=118]
+[ext_resource path="res://Assets/Bombado/Bombado17.png" type="Texture" id=119]
+[ext_resource path="res://Assets/Bombado/Bombado36.png" type="Texture" id=120]
+[ext_resource path="res://Assets/Bombado/Bombado35.png" type="Texture" id=121]
+[ext_resource path="res://Assets/Baby/Baby00.png" type="Texture" id=122]
+[ext_resource path="res://Assets/Bombado/Bombado00.png" type="Texture" id=123]
+[ext_resource path="res://Assets/Pickleman/PickleMan40.png" type="Texture" id=124]
+[ext_resource path="res://Assets/Bombado/Bombado28.png" type="Texture" id=125]
+[ext_resource path="res://Assets/Bombado/Bombado27.png" type="Texture" id=126]
+[ext_resource path="res://Assets/Bombado/Bombado29.png" type="Texture" id=127]
+[ext_resource path="res://Assets/Pickleman/PickleMan03.png" type="Texture" id=128]
+[ext_resource path="res://Assets/Bombado/Bombado09.png" type="Texture" id=129]
+[ext_resource path="res://Assets/Bombado/Bombado13.png" type="Texture" id=130]
+[ext_resource path="res://Assets/Bombado/Bombado12.png" type="Texture" id=131]
+[ext_resource path="res://Assets/Pickleman/PickleMan35.png" type="Texture" id=132]
+[ext_resource path="res://Assets/Pickleman/PickleMan34.png" type="Texture" id=133]
+[ext_resource path="res://Assets/Pickleman/PickleMan44.png" type="Texture" id=134]
+[ext_resource path="res://Assets/Pickleman/PickleMan18.png" type="Texture" id=135]
+[ext_resource path="res://Assets/Bombado/Bombado26.png" type="Texture" id=136]
+[ext_resource path="res://Assets/Bombado/Bombado48.png" type="Texture" id=137]
+[ext_resource path="res://Assets/Bombado/Bombado49.png" type="Texture" id=138]
+[ext_resource path="res://Assets/Baby/Baby40.png" type="Texture" id=139]
+[ext_resource path="res://Assets/Pickleman/PickleMan33.png" type="Texture" id=140]
+[ext_resource path="res://Assets/Pickleman/PickleMan06.png" type="Texture" id=141]
+[ext_resource path="res://Assets/Pickleman/PickleMan23.png" type="Texture" id=142]
+[ext_resource path="res://Assets/Baby/Baby01.png" type="Texture" id=143]
+[ext_resource path="res://Assets/Bombado/Bombado44.png" type="Texture" id=144]
+[ext_resource path="res://Assets/Bombado/Bombado43.png" type="Texture" id=145]
+[ext_resource path="res://Assets/Bombado/Bombado15.png" type="Texture" id=146]
+[ext_resource path="res://Assets/Bombado/Bombado24.png" type="Texture" id=147]
+[ext_resource path="res://Assets/Bombado/Bombado25.png" type="Texture" id=148]
+[ext_resource path="res://Assets/Bombado/Bombado42.png" type="Texture" id=149]
+[ext_resource path="res://Assets/Baby/Baby41.png" type="Texture" id=150]
+[ext_resource path="res://Assets/Bombado/Bombado39.png" type="Texture" id=151]
+[ext_resource path="res://Assets/Bombado/Bombado41.png" type="Texture" id=152]
+[ext_resource path="res://Assets/Bombado/Bombado40.png" type="Texture" id=153]
+[ext_resource path="res://Assets/Baby/Baby35.png" type="Texture" id=154]
+[ext_resource path="res://Assets/Bombado/Bombado23.png" type="Texture" id=155]
+[ext_resource path="res://Assets/Baby/Baby10.png" type="Texture" id=156]
+[ext_resource path="res://Assets/Pickleman/PickleMan14.png" type="Texture" id=157]
+[ext_resource path="res://Assets/Baby/Baby46.png" type="Texture" id=158]
+[ext_resource path="res://Assets/Pickleman/PickleMan30.png" type="Texture" id=159]
+[ext_resource path="res://Assets/Pickleman/PickleMan31.png" type="Texture" id=160]
+[ext_resource path="res://Assets/Baby/Baby48.png" type="Texture" id=161]
+[ext_resource path="res://Assets/Pickleman/PickleMan04.png" type="Texture" id=162]
+[ext_resource path="res://Assets/Bombado/Bombado11.png" type="Texture" id=163]
+[ext_resource path="res://Assets/Pickleman/PickleMan32.png" type="Texture" id=164]
+[ext_resource path="res://Assets/Bombado/Bombado31.png" type="Texture" id=165]
+[ext_resource path="res://Assets/Bombado/Bombado30.png" type="Texture" id=166]
+[ext_resource path="res://Assets/Pickleman/PickleMan11.png" type="Texture" id=167]
+[ext_resource path="res://Assets/Baby/Baby39.png" type="Texture" id=168]
+[ext_resource path="res://Assets/Baby/Baby14.png" type="Texture" id=169]
+[ext_resource path="res://Assets/Baby/Baby33.png" type="Texture" id=170]
+[ext_resource path="res://Assets/Baby/Baby24.png" type="Texture" id=171]
+[ext_resource path="res://Assets/Pickleman/PickleMan05.png" type="Texture" id=172]
+[ext_resource path="res://Assets/Bombado/Bombado37.png" type="Texture" id=173]
+[ext_resource path="res://Assets/Bombado/Bombado38.png" type="Texture" id=174]
+[ext_resource path="res://Assets/Bombado/Bombado34.png" type="Texture" id=175]
+[ext_resource path="res://Assets/Bombado/Bombado33.png" type="Texture" id=176]
+[ext_resource path="res://Assets/Pickleman/PickleMan46.png" type="Texture" id=177]
+[ext_resource path="res://Assets/Baby/Baby07.png" type="Texture" id=178]
+[ext_resource path="res://Assets/Baby/Baby19.png" type="Texture" id=179]
+[ext_resource path="res://Assets/Pickleman/PickleMan25.png" type="Texture" id=180]
+[ext_resource path="res://Assets/Pickleman/PickleMan24.png" type="Texture" id=181]
+[ext_resource path="res://Assets/Bombado/Bombado45.png" type="Texture" id=182]
+[ext_resource path="res://Assets/Pickleman/PickleMan15.png" type="Texture" id=183]
+[ext_resource path="res://Assets/Pickleman/PickleMan49.png" type="Texture" id=184]
+[ext_resource path="res://Assets/Pickleman/PickleMan39.png" type="Texture" id=185]
+[ext_resource path="res://Assets/Pickleman/PickleMan08.png" type="Texture" id=186]
+[ext_resource path="res://Assets/Bombado/Bombado32.png" type="Texture" id=187]
+[ext_resource path="res://Assets/Baby/Baby42.png" type="Texture" id=188]
+[ext_resource path="res://Assets/Bombado/Bombado01.png" type="Texture" id=189]
+[ext_resource path="res://Assets/Pickleman/PickleMan26.png" type="Texture" id=190]
+[ext_resource path="res://Assets/Bombado/Bombado20.png" type="Texture" id=191]
+[ext_resource path="res://Assets/Baby/Baby18.png" type="Texture" id=192]
+[ext_resource path="res://Assets/Baby/Baby43.png" type="Texture" id=193]
+[ext_resource path="res://Assets/Pickleman/PickleMan48.png" type="Texture" id=194]
+[ext_resource path="res://Assets/Pickleman/PickleMan38.png" type="Texture" id=195]
+[ext_resource path="res://Assets/Pickleman/PickleMan27.png" type="Texture" id=196]
+[ext_resource path="res://Assets/Bombado/Bombado04.png" type="Texture" id=197]
+[ext_resource path="res://Assets/Bombado/Bombado05.png" type="Texture" id=198]
+[ext_resource path="res://Assets/Baby/Baby06.png" type="Texture" id=199]
+[ext_resource path="res://Assets/Pickleman/PickleMan45.png" type="Texture" id=200]
+[ext_resource path="res://Assets/Pickleman/PickleMan43.png" type="Texture" id=201]
+[ext_resource path="res://Assets/Pickleman/PickleMan42.png" type="Texture" id=202]
+[ext_resource path="res://Assets/Baby/Baby32.png" type="Texture" id=203]
+[ext_resource path="res://Assets/Baby/Baby49.png" type="Texture" id=204]
+[ext_resource path="res://Assets/Pickleman/PickleMan22.png" type="Texture" id=205]
+[ext_resource path="res://Assets/Baby/Baby22.png" type="Texture" id=206]
+[ext_resource path="res://Assets/Baby/Baby45.png" type="Texture" id=207]
+[ext_resource path="res://Assets/Pickleman/PickleMan21.png" type="Texture" id=208]
+[ext_resource path="res://Assets/Pickleman/PickleMan20.png" type="Texture" id=209]
+[ext_resource path="res://Assets/Baby/Baby20.png" type="Texture" id=210]
+[ext_resource path="res://Assets/Bombado/Bombado16.png" type="Texture" id=211]
+[ext_resource path="res://Assets/Pickleman/PickleMan10.png" type="Texture" id=212]
+[ext_resource path="res://Assets/Pickleman/PickleMan09.png" type="Texture" id=213]
+[ext_resource path="res://Assets/Pickleman/PickleMan13.png" type="Texture" id=214]
+[ext_resource path="res://Assets/Pickleman/PickleMan36.png" type="Texture" id=215]
+[ext_resource path="res://Assets/Pickleman/PickleMan37.png" type="Texture" id=216]
+[ext_resource path="res://Assets/Bombado/Bombado02.png" type="Texture" id=217]
+[ext_resource path="res://Assets/Baby/Baby05.png" type="Texture" id=218]
+[ext_resource path="res://EndGameAnimation.tscn" type="PackedScene" id=219]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Light_Blink"
@@ -90,6 +241,21 @@ animations = [ {
 "loop": true,
 "name": "default",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 123 ), ExtResource( 189 ), ExtResource( 217 ), ExtResource( 70 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 116 ), ExtResource( 129 ), ExtResource( 109 ), ExtResource( 163 ), ExtResource( 131 ), ExtResource( 130 ), ExtResource( 84 ), ExtResource( 146 ), ExtResource( 211 ), ExtResource( 119 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 191 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 155 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 136 ), ExtResource( 126 ), ExtResource( 125 ), ExtResource( 127 ), ExtResource( 166 ), ExtResource( 165 ), ExtResource( 187 ), ExtResource( 176 ), ExtResource( 175 ), ExtResource( 121 ), ExtResource( 120 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 151 ), ExtResource( 153 ), ExtResource( 152 ), ExtResource( 149 ), ExtResource( 145 ), ExtResource( 144 ), ExtResource( 182 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 137 ), ExtResource( 138 ) ],
+"loop": true,
+"name": "bombado",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 122 ), ExtResource( 143 ), ExtResource( 80 ), ExtResource( 94 ), ExtResource( 99 ), ExtResource( 218 ), ExtResource( 199 ), ExtResource( 178 ), ExtResource( 96 ), ExtResource( 81 ), ExtResource( 156 ), ExtResource( 97 ), ExtResource( 82 ), ExtResource( 95 ), ExtResource( 169 ), ExtResource( 75 ), ExtResource( 74 ), ExtResource( 83 ), ExtResource( 192 ), ExtResource( 179 ), ExtResource( 210 ), ExtResource( 69 ), ExtResource( 206 ), ExtResource( 90 ), ExtResource( 171 ), ExtResource( 73 ), ExtResource( 76 ), ExtResource( 89 ), ExtResource( 79 ), ExtResource( 72 ), ExtResource( 91 ), ExtResource( 108 ), ExtResource( 203 ), ExtResource( 170 ), ExtResource( 98 ), ExtResource( 154 ), ExtResource( 71 ), ExtResource( 106 ), ExtResource( 115 ), ExtResource( 168 ), ExtResource( 139 ), ExtResource( 150 ), ExtResource( 188 ), ExtResource( 193 ), ExtResource( 104 ), ExtResource( 207 ), ExtResource( 158 ), ExtResource( 101 ), ExtResource( 161 ), ExtResource( 204 ) ],
+"loop": true,
+"name": "baby",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 93 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 128 ), ExtResource( 162 ), ExtResource( 172 ), ExtResource( 141 ), ExtResource( 92 ), ExtResource( 186 ), ExtResource( 213 ), ExtResource( 212 ), ExtResource( 167 ), ExtResource( 110 ), ExtResource( 214 ), ExtResource( 157 ), ExtResource( 183 ), ExtResource( 114 ), ExtResource( 100 ), ExtResource( 135 ), ExtResource( 107 ), ExtResource( 209 ), ExtResource( 208 ), ExtResource( 205 ), ExtResource( 142 ), ExtResource( 181 ), ExtResource( 180 ), ExtResource( 190 ), ExtResource( 196 ), ExtResource( 103 ), ExtResource( 102 ), ExtResource( 159 ), ExtResource( 160 ), ExtResource( 164 ), ExtResource( 140 ), ExtResource( 133 ), ExtResource( 132 ), ExtResource( 215 ), ExtResource( 216 ), ExtResource( 195 ), ExtResource( 185 ), ExtResource( 124 ), ExtResource( 105 ), ExtResource( 202 ), ExtResource( 201 ), ExtResource( 134 ), ExtResource( 200 ), ExtResource( 177 ), ExtResource( 113 ), ExtResource( 194 ), ExtResource( 184 ) ],
+"loop": true,
+"name": "pickleman",
+"speed": 5.0
 } ]
 
 [sub_resource type="Gradient" id=3]
@@ -99,20 +265,20 @@ colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0 )
 [sub_resource type="GradientTexture" id=4]
 gradient = SubResource( 3 )
 
-[sub_resource type="ParticlesMaterial" id=5]
+[sub_resource type="ParticlesMaterial" id=10]
 emission_shape = 2
 emission_box_extents = Vector3( 140, 1, 1 )
 flag_disable_z = true
 direction = Vector3( 0, -100, 0 )
 spread = 0.0
-gravity = Vector3( 0, -220, 0 )
+gravity = Vector3( 0, -8, 0 )
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-scale = 5.0
+scale = 0.24
 scale_random = 1.0
 color_ramp = SubResource( 4 )
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=6]
 resource_name = "Transform"
 length = 8.0
 tracks/0/type = "value"
@@ -175,9 +341,35 @@ tracks/4/keys = {
 "update": 1,
 "values": [ true, false ]
 }
+tracks/5/type = "method"
+tracks/5/path = NodePath("../../..")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 4.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "change_experiment_animation"
+} ]
+}
 
-[sub_resource type="Animation" id=6]
-resource_name = "Color_change"
+[sub_resource type="ParticlesMaterial" id=5]
+emission_shape = 2
+emission_box_extents = Vector3( 140, 1, 1 )
+flag_disable_z = true
+direction = Vector3( 0, -100, 0 )
+spread = 0.0
+gravity = Vector3( 0, -8, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.24
+scale_random = 1.0
+color_ramp = SubResource( 4 )
+
+[sub_resource type="Animation" id=7]
 length = 3.0
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Capsula/Gosma:modulate:r")
@@ -260,7 +452,7 @@ tracks/7/keys = {
 "times": PoolRealArray( 0, 3 )
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Capsula:position:x")
 tracks/0/interp = 1
@@ -312,7 +504,7 @@ tracks/4/keys = {
 "times": PoolRealArray( 0, 1 )
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 tracks/0/type = "bezier"
 tracks/0/path = NodePath("Capsula:position:x")
 tracks/0/interp = 1
@@ -366,6 +558,13 @@ tracks/4/keys = {
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 12 )
+
+[node name="End" type="Node2D" parent="."]
+z_index = 10
+
+[node name="EndGameAnimation" parent="End" instance=ExtResource( 219 )]
+margin_right = 1920.0
+margin_bottom = 1080.0
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 960, 540 )
@@ -428,6 +627,7 @@ range_z_max = 4
 anims/Light_Blink = SubResource( 1 )
 
 [node name="Capsula" type="Node2D" parent="."]
+position = Vector2( 0, 599 )
 z_index = 1
 
 [node name="Capsule" type="Sprite" parent="Capsula"]
@@ -441,7 +641,8 @@ z_index = -1
 [node name="Alien" type="AnimatedSprite" parent="Capsula/Gosma"]
 z_index = 1
 frames = SubResource( 2 )
-frame = 49
+animation = "baby"
+frame = 25
 speed_scale = 2.0
 playing = true
 centered = false
@@ -452,23 +653,32 @@ z_index = 1
 texture = ExtResource( 9 )
 centered = false
 
-[node name="Particles2D" type="Particles2D" parent="Capsula/Gosma"]
+[node name="BubblesEvolvolution" type="Particles2D" parent="Capsula/Gosma"]
 position = Vector2( 964.998, 636.062 )
 z_index = 1
 emitting = false
-amount = 1000
-lifetime = 2.0
+amount = 40
+lifetime = 8.0
+speed_scale = 0.58
+process_material = SubResource( 10 )
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Capsula/Gosma/BubblesEvolvolution"]
+anims/Transform = SubResource( 6 )
+
+[node name="Bubbles" type="Particles2D" parent="Capsula/Gosma"]
+position = Vector2( 964.998, 636.062 )
+z_index = 1
+amount = 16
+lifetime = 2.5
 speed_scale = 0.58
 process_material = SubResource( 5 )
 texture = ExtResource( 2 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Capsula/Gosma/Particles2D"]
-anims/Transform = SubResource( 9 )
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Color_change = SubResource( 6 )
-anims/Movement = SubResource( 7 )
-anims/Movement_in = SubResource( 8 )
+anims/Color_change = SubResource( 7 )
+anims/Movement = SubResource( 8 )
+anims/Movement_in = SubResource( 9 )
 
 [node name="Fib" type="Node2D" parent="."]
 z_index = 5
