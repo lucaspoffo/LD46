@@ -12,8 +12,8 @@ func set_triangle_disabled(disabled : bool):
 	$Submit2.disabled = disabled
 
 func set_binary_disabled(disabled : bool):
-	$Binary0.disabled = disabled
-	$Binary1.disabled = disabled
+	$Binary.disabled = disabled
+	$Binary2.disabled = disabled
 
 func _on_Submit_pressed():
 	Event.emit_signal("triangle_submit", v1 * 10 + v2)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/Puzzle2/Bs32.png" type="Texture" id=1]
 [ext_resource path="res://Interfaces/LightsOut.gd" type="Script" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Assets/Puzzle2/Rs13.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Puzzle2/Rs33.png" type="Texture" id=20]
 [ext_resource path="res://Assets/Geral/HOLOGRAM.png" type="Texture" id=21]
+[ext_resource path="res://Interfaces/OurButton.tscn" type="PackedScene" id=22]
 
 [node name="LightsOut" type="Node2D"]
 script = ExtResource( 2 )
@@ -38,119 +39,92 @@ flip_h = true
 [node name="Buttons" type="Node2D" parent="."]
 position = Vector2( 9.73968, 39.1823 )
 
-[node name="TextureButton" type="TextureButton" parent="Buttons"]
+[node name="OurButton9" parent="Buttons" instance=ExtResource( 22 )]
 margin_left = -8.37099
 margin_top = 42.1458
 margin_right = 59.629
 margin_bottom = 110.146
 toggle_mode = true
-pressed = true
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+pitch_scale = 9.0
 
-[node name="TextureButton2" type="TextureButton" parent="Buttons"]
+[node name="OurButton8" parent="Buttons" instance=ExtResource( 22 )]
 margin_left = 75.0
 margin_top = 35.5954
 margin_right = 143.0
 margin_bottom = 103.595
 toggle_mode = true
-pressed = true
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 15 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+pitch_scale = 9.0
 
-[node name="TextureButton3" type="TextureButton" parent="Buttons"]
+[node name="OurButton7" parent="Buttons" instance=ExtResource( 22 )]
 margin_left = 151.676
 margin_top = 33.0
 margin_right = 219.676
 margin_bottom = 101.0
 toggle_mode = true
-pressed = true
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 19 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+pitch_scale = 9.0
 
-[node name="TextureButton6" type="TextureButton" parent="Buttons"]
+[node name="OurButton6" parent="Buttons" instance=ExtResource( 22 )]
 margin_left = -8.37099
 margin_top = 121.065
 margin_right = 59.629
 margin_bottom = 189.065
 toggle_mode = true
-pressed = true
 texture_normal = ExtResource( 11 )
 texture_pressed = ExtResource( 16 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+pitch_scale = 9.0
 
-[node name="TextureButton5" type="TextureButton" parent="Buttons"]
+[node name="OurButton5" parent="Buttons" instance=ExtResource( 22 )]
 margin_left = 75.0
 margin_top = 114.22
 margin_right = 143.0
 margin_bottom = 182.22
 toggle_mode = true
-pressed = true
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 18 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+pitch_scale = 9.0
 
-[node name="TextureButton4" type="TextureButton" parent="Buttons"]
+[node name="OurButton4" parent="Buttons" instance=ExtResource( 22 )]
 margin_left = 151.676
 margin_top = 103.328
 margin_right = 219.676
 margin_bottom = 171.328
 toggle_mode = true
-pressed = true
 texture_normal = ExtResource( 17 )
 texture_pressed = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+pitch_scale = 9.0
 
-[node name="TextureButton7" type="TextureButton" parent="Buttons"]
-margin_left = -8.37099
+[node name="OurButton3" parent="Buttons" instance=ExtResource( 22 )]
+margin_left = -8.371
 margin_top = 198.892
 margin_right = 59.629
 margin_bottom = 266.892
 toggle_mode = true
-pressed = true
 texture_normal = ExtResource( 13 )
 texture_pressed = ExtResource( 14 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+pitch_scale = 9.0
 
-[node name="TextureButton8" type="TextureButton" parent="Buttons"]
+[node name="OurButton2" parent="Buttons" instance=ExtResource( 22 )]
 margin_left = 75.0
 margin_top = 185.262
 margin_right = 143.0
 margin_bottom = 253.262
 toggle_mode = true
-pressed = true
 texture_normal = ExtResource( 1 )
 texture_pressed = ExtResource( 12 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+pitch_scale = 9.0
 
-[node name="TextureButton9" type="TextureButton" parent="Buttons"]
+[node name="OurButton" parent="Buttons" instance=ExtResource( 22 )]
 margin_left = 151.676
 margin_top = 173.279
 margin_right = 219.676
 margin_bottom = 241.279
 toggle_mode = true
-pressed = true
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 20 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+pitch_scale = 9.0

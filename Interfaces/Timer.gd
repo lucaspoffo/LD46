@@ -1,6 +1,6 @@
 extends Node2D
 
-var _seconds := 20
+var _seconds := 60
 var _ampoules
 var can_inject := false
 export var enabled_indicator: Texture

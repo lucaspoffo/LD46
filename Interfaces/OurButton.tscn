@@ -10,6 +10,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+audio = ExtResource( 2 )
 
 [node name="PressSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
