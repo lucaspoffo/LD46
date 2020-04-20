@@ -1,18 +1,17 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Interfaces/Timer.gd" type="Script" id=1]
 [ext_resource path="res://Interfaces/Ampoule.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Interfaces/HologramLabel.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/Timer_Temp.png" type="Texture" id=4]
-[ext_resource path="res://Assets/InjecaoVazia_Temp.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Injecao_Temp.png" type="Texture" id=6]
-[ext_resource path="res://icon.png" type="Texture" id=7]
-[ext_resource path="res://icon_red.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Geral/AMPOLA_LIGHT_ON.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Geral/TIMER_BASE.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Geral/AMPOLA_LIGHT_OFF.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Geral/TIMER_HOLOGRAM.png" type="Texture" id=7]
 
 [node name="Timer" type="Node2D"]
 script = ExtResource( 1 )
-enabled_indicator = ExtResource( 7 )
-disabled_indicator = ExtResource( 8 )
+enabled_indicator = ExtResource( 4 )
+disabled_indicator = ExtResource( 6 )
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
@@ -24,50 +23,47 @@ margin_right = 87.8938
 margin_bottom = -29.453
 text = "00:00"
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -1.23398, -30.1421 )
+[node name="Base" type="Sprite" parent="."]
+position = Vector2( 0.656769, -33.2933 )
 scale = Vector2( 1.1529, 1.04267 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="Ampoules" type="Node2D" parent="."]
 
 [node name="Ampoule" parent="Ampoules" instance=ExtResource( 2 )]
-margin_left = -308.378
-margin_top = -131.04
-margin_right = -209.378
-margin_bottom = 7.96001
-texture_normal = ExtResource( 6 )
-texture_disabled = ExtResource( 5 )
+margin_left = -321.613
+margin_top = -129.149
+margin_right = -181.613
+margin_bottom = 47.8508
 
 [node name="Ampoule2" parent="Ampoules" instance=ExtResource( 2 )]
-margin_left = -207.24
+margin_left = -218.585
 margin_top = -150.689
-margin_right = -108.24
-margin_bottom = -11.6888
-texture_normal = ExtResource( 6 )
-texture_disabled = ExtResource( 5 )
+margin_right = -78.5845
+margin_bottom = 26.311
 
 [node name="Ampoule3" parent="Ampoules" instance=ExtResource( 2 )]
 margin_left = 102.353
 margin_top = -151.127
 margin_right = 201.353
 margin_bottom = -12.127
-texture_normal = ExtResource( 6 )
-texture_disabled = ExtResource( 5 )
 
 [node name="Ampoule4" parent="Ampoules" instance=ExtResource( 2 )]
 margin_left = 198.282
 margin_top = -130.049
 margin_right = 297.282
 margin_bottom = 8.951
-texture_normal = ExtResource( 6 )
-texture_disabled = ExtResource( 5 )
 
 [node name="TimerIndicator" type="Sprite" parent="."]
-position = Vector2( -146.212, 16.5807 )
-texture = ExtResource( 7 )
+position = Vector2( -159.073, 21.725 )
+texture = ExtResource( 4 )
 
 [node name="CanInjectIndicator" type="Sprite" parent="."]
-position = Vector2( 140.183, 19.5955 )
+position = Vector2( 169.334, 22.1676 )
+texture = ExtResource( 4 )
+
+[node name="Hologram" type="Sprite" parent="."]
+position = Vector2( 0, -26.4705 )
+scale = Vector2( 1.13178, 1.02954 )
 texture = ExtResource( 7 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

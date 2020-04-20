@@ -1,58 +1,128 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://Interfaces/Timer.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/BG_Temp.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Geral/PLATFORM.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Geral/TUBE_METAL.png" type="Texture" id=3]
 [ext_resource path="res://Interfaces/ButtonPuzzle.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Interfaces/LightsOut.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Interfaces/CentralPanel.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/Capsula_Temp.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Painel_Temp.png" type="Texture" id=8]
-[ext_resource path="res://Assets/Triangle_Temp.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Base_Temp.png" type="Texture" id=10]
-[ext_resource path="res://Assets/Alien_Temp.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Geral/PANEL.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Geral/BG.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Geral/TUBE_LIQUID_GREEN.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Geral/TRIANGLE.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Personagem/picles44.png" type="Texture" id=11]
 [ext_resource path="res://Main.gd" type="Script" id=12]
 [ext_resource path="res://Interfaces/HologramLabel.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/Personagem/picles28.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Personagem/picles10.png" type="Texture" id=15]
+[ext_resource path="res://Assets/Personagem/picles37.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Geral/FIBONACCI_BUT.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Geral/FIBONACCI_BUT_DOWN.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Personagem/picles31.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Personagem/picles34.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Personagem/picles27.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Personagem/picles05.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Personagem/picles19.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Personagem/picles09.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Personagem/picles08.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Personagem/picles14.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Personagem/picles24.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Personagem/picles23.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Personagem/picles11.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Personagem/picles30.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Personagem/picles29.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Personagem/picles16.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Personagem/picles45.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Personagem/picles38.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Personagem/picles06.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Personagem/picles43.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Personagem/picles04.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Personagem/picles15.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Personagem/picles46.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Personagem/picles40.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Personagem/picles47.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Personagem/picles01.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Personagem/picles07.png" type="Texture" id=43]
+[ext_resource path="res://Assets/Personagem/picles20.png" type="Texture" id=44]
+[ext_resource path="res://Assets/Personagem/picles18.png" type="Texture" id=45]
+[ext_resource path="res://Assets/Personagem/picles17.png" type="Texture" id=46]
+[ext_resource path="res://Assets/Personagem/picles39.png" type="Texture" id=47]
+[ext_resource path="res://Assets/Personagem/picles03.png" type="Texture" id=48]
+[ext_resource path="res://Assets/Personagem/picles49.png" type="Texture" id=49]
+[ext_resource path="res://Assets/Personagem/picles48.png" type="Texture" id=50]
+[ext_resource path="res://Assets/Personagem/picles32.png" type="Texture" id=51]
+[ext_resource path="res://Assets/Personagem/picles33.png" type="Texture" id=52]
+[ext_resource path="res://Assets/Personagem/picles26.png" type="Texture" id=53]
+[ext_resource path="res://Assets/Personagem/picles00.png" type="Texture" id=54]
+[ext_resource path="res://Assets/Personagem/picles36.png" type="Texture" id=55]
+[ext_resource path="res://Assets/Personagem/picles42.png" type="Texture" id=56]
+[ext_resource path="res://Assets/Personagem/picles41.png" type="Texture" id=57]
+[ext_resource path="res://Assets/Personagem/picles22.png" type="Texture" id=58]
+[ext_resource path="res://Assets/Personagem/picles35.png" type="Texture" id=59]
+[ext_resource path="res://Assets/Personagem/picles02.png" type="Texture" id=60]
+[ext_resource path="res://Assets/Personagem/picles21.png" type="Texture" id=61]
+[ext_resource path="res://Assets/Personagem/picles13.png" type="Texture" id=62]
+[ext_resource path="res://Assets/Personagem/picles12.png" type="Texture" id=63]
+[ext_resource path="res://Assets/Personagem/picles25.png" type="Texture" id=64]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 54 ), ExtResource( 42 ), ExtResource( 60 ), ExtResource( 48 ), ExtResource( 37 ), ExtResource( 22 ), ExtResource( 35 ), ExtResource( 43 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 15 ), ExtResource( 29 ), ExtResource( 63 ), ExtResource( 62 ), ExtResource( 26 ), ExtResource( 38 ), ExtResource( 32 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 23 ), ExtResource( 44 ), ExtResource( 61 ), ExtResource( 58 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 64 ), ExtResource( 53 ), ExtResource( 21 ), ExtResource( 14 ), ExtResource( 31 ), ExtResource( 30 ), ExtResource( 19 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 20 ), ExtResource( 59 ), ExtResource( 55 ), ExtResource( 16 ), ExtResource( 34 ), ExtResource( 47 ), ExtResource( 40 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 36 ), ExtResource( 11 ), ExtResource( 33 ), ExtResource( 39 ), ExtResource( 41 ), ExtResource( 50 ), ExtResource( 49 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 12 )
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 963.359, 540.753 )
-texture = ExtResource( 2 )
+texture = ExtResource( 8 )
 
 [node name="Capsule" type="Sprite" parent="."]
-position = Vector2( 960, 412.264 )
-texture = ExtResource( 7 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Alien" type="AnimatedSprite" parent="Capsule"]
+frames = SubResource( 1 )
+frame = 45
+speed_scale = 2.0
+playing = true
+centered = false
 
 [node name="Base" type="Sprite" parent="Capsule"]
 show_behind_parent = true
-position = Vector2( -107.419, 383.947 )
-texture = ExtResource( 10 )
+position = Vector2( -0.0831833, -8.38419 )
+texture = ExtResource( 2 )
+centered = false
 
-[node name="Alien" type="Sprite" parent="Capsule"]
-texture = ExtResource( 11 )
+[node name="Liquid" type="Sprite" parent="Capsule"]
+show_behind_parent = true
+texture = ExtResource( 9 )
+centered = false
 
 [node name="Panel" type="Sprite" parent="."]
-position = Vector2( 961.261, 958.17 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
+centered = false
 
 [node name="Triangle" type="Sprite" parent="."]
-position = Vector2( 960, 765.501 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
+centered = false
 
 [node name="LightsOut" parent="." instance=ExtResource( 5 )]
 visible = false
-position = Vector2( 302.765, 601.632 )
+position = Vector2( 286.109, 590.528 )
 
 [node name="Timer" parent="." instance=ExtResource( 1 )]
-position = Vector2( 960.664, 919.809 )
+position = Vector2( 961.83, 898.815 )
 
 [node name="CentralPanel" parent="." instance=ExtResource( 6 )]
-position = Vector2( 960, 957.619 )
+position = Vector2( 960, 980.946 )
 
 [node name="ButtonPuzzle" parent="." instance=ExtResource( 4 )]
 visible = false
-position = Vector2( 1279.54, 619.439 )
+position = Vector2( 1312.85, 628.692 )
 
 [node name="ExpirimentLabel" parent="." instance=ExtResource( 13 )]
 margin_left = 942.96
@@ -60,3 +130,28 @@ margin_top = 87.7473
 margin_right = 974.96
 margin_bottom = 159.747
 text = "1"
+
+[node name="FibSubmit" type="TextureButton" parent="."]
+margin_left = 458.077
+margin_top = 976.047
+margin_right = 545.077
+margin_bottom = 1037.05
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FibSubmit2" type="TextureButton" parent="."]
+margin_left = 1453.3
+margin_top = 973.183
+margin_right = 1540.3
+margin_bottom = 1034.18
+rect_scale = Vector2( -1, 1 )
+texture_normal = ExtResource( 17 )
+texture_pressed = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="FibSubmit" to="." method="_on_FibSubmit_pressed"]
+[connection signal="pressed" from="FibSubmit2" to="." method="_on_FibSubmit_pressed"]

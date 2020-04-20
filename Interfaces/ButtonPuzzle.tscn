@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/Puzzle1/BSquare_4.png" type="Texture" id=1]
 [ext_resource path="res://Interfaces/ButtonPuzzle.gd" type="Script" id=2]
@@ -7,7 +7,7 @@
 [ext_resource path="res://Assets/Puzzle1/RSquare_1.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Puzzle1/BSquare_3.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Puzzle1/RSquare_4.png" type="Texture" id=7]
-[ext_resource path="res://Assets/Holo_Temp.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Geral/HOLOGRAM.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Puzzle1/BSquare_1.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Puzzle1/BSquare_2.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Puzzle1/RSquare_2.png" type="Texture" id=11]
@@ -16,14 +16,18 @@
 [ext_resource path="res://Assets/Puzzle1/ClockRed_Temp.png" type="Texture" id=14]
 [ext_resource path="res://Assets/Puzzle1/Pointer_Temp.png" type="Texture" id=15]
 [ext_resource path="res://Fonts/Exo_60.tres" type="DynamicFont" id=16]
-
+[ext_resource path="res://Assets/Geral/HOLOGRAM_BASE.png" type="Texture" id=17]
 
 [node name="ButtonPuzzle" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Hologram" type="Sprite" parent="."]
-position = Vector2( 271.33, 185.388 )
+position = Vector2( 264.682, 146.607 )
 texture = ExtResource( 8 )
+
+[node name="Base" type="Sprite" parent="."]
+position = Vector2( 259.279, 325.761 )
+texture = ExtResource( 17 )
 
 [node name="Switchs" type="Node2D" parent="."]
 
