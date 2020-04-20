@@ -244,9 +244,9 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 123 ), ExtResource( 189 ), ExtResource( 217 ), ExtResource( 70 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 116 ), ExtResource( 129 ), ExtResource( 109 ), ExtResource( 163 ), ExtResource( 131 ), ExtResource( 130 ), ExtResource( 84 ), ExtResource( 146 ), ExtResource( 211 ), ExtResource( 119 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 191 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 155 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 136 ), ExtResource( 126 ), ExtResource( 125 ), ExtResource( 127 ), ExtResource( 166 ), ExtResource( 165 ), ExtResource( 187 ), ExtResource( 176 ), ExtResource( 175 ), ExtResource( 121 ), ExtResource( 120 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 151 ), ExtResource( 153 ), ExtResource( 152 ), ExtResource( 149 ), ExtResource( 145 ), ExtResource( 144 ), ExtResource( 182 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 137 ), ExtResource( 138 ) ],
+"frames": [ ExtResource( 93 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 128 ), ExtResource( 162 ), ExtResource( 172 ), ExtResource( 141 ), ExtResource( 92 ), ExtResource( 186 ), ExtResource( 213 ), ExtResource( 212 ), ExtResource( 167 ), ExtResource( 110 ), ExtResource( 214 ), ExtResource( 157 ), ExtResource( 183 ), ExtResource( 114 ), ExtResource( 100 ), ExtResource( 135 ), ExtResource( 107 ), ExtResource( 209 ), ExtResource( 208 ), ExtResource( 205 ), ExtResource( 142 ), ExtResource( 181 ), ExtResource( 180 ), ExtResource( 190 ), ExtResource( 196 ), ExtResource( 103 ), ExtResource( 102 ), ExtResource( 159 ), ExtResource( 160 ), ExtResource( 164 ), ExtResource( 140 ), ExtResource( 133 ), ExtResource( 132 ), ExtResource( 215 ), ExtResource( 216 ), ExtResource( 195 ), ExtResource( 185 ), ExtResource( 124 ), ExtResource( 105 ), ExtResource( 202 ), ExtResource( 201 ), ExtResource( 134 ), ExtResource( 200 ), ExtResource( 177 ), ExtResource( 113 ), ExtResource( 194 ), ExtResource( 184 ) ],
 "loop": true,
-"name": "bombado",
+"name": "pickleman",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 122 ), ExtResource( 143 ), ExtResource( 80 ), ExtResource( 94 ), ExtResource( 99 ), ExtResource( 218 ), ExtResource( 199 ), ExtResource( 178 ), ExtResource( 96 ), ExtResource( 81 ), ExtResource( 156 ), ExtResource( 97 ), ExtResource( 82 ), ExtResource( 95 ), ExtResource( 169 ), ExtResource( 75 ), ExtResource( 74 ), ExtResource( 83 ), ExtResource( 192 ), ExtResource( 179 ), ExtResource( 210 ), ExtResource( 69 ), ExtResource( 206 ), ExtResource( 90 ), ExtResource( 171 ), ExtResource( 73 ), ExtResource( 76 ), ExtResource( 89 ), ExtResource( 79 ), ExtResource( 72 ), ExtResource( 91 ), ExtResource( 108 ), ExtResource( 203 ), ExtResource( 170 ), ExtResource( 98 ), ExtResource( 154 ), ExtResource( 71 ), ExtResource( 106 ), ExtResource( 115 ), ExtResource( 168 ), ExtResource( 139 ), ExtResource( 150 ), ExtResource( 188 ), ExtResource( 193 ), ExtResource( 104 ), ExtResource( 207 ), ExtResource( 158 ), ExtResource( 101 ), ExtResource( 161 ), ExtResource( 204 ) ],
@@ -254,9 +254,9 @@ animations = [ {
 "name": "baby",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 93 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 128 ), ExtResource( 162 ), ExtResource( 172 ), ExtResource( 141 ), ExtResource( 92 ), ExtResource( 186 ), ExtResource( 213 ), ExtResource( 212 ), ExtResource( 167 ), ExtResource( 110 ), ExtResource( 214 ), ExtResource( 157 ), ExtResource( 183 ), ExtResource( 114 ), ExtResource( 100 ), ExtResource( 135 ), ExtResource( 107 ), ExtResource( 209 ), ExtResource( 208 ), ExtResource( 205 ), ExtResource( 142 ), ExtResource( 181 ), ExtResource( 180 ), ExtResource( 190 ), ExtResource( 196 ), ExtResource( 103 ), ExtResource( 102 ), ExtResource( 159 ), ExtResource( 160 ), ExtResource( 164 ), ExtResource( 140 ), ExtResource( 133 ), ExtResource( 132 ), ExtResource( 215 ), ExtResource( 216 ), ExtResource( 195 ), ExtResource( 185 ), ExtResource( 124 ), ExtResource( 105 ), ExtResource( 202 ), ExtResource( 201 ), ExtResource( 134 ), ExtResource( 200 ), ExtResource( 177 ), ExtResource( 113 ), ExtResource( 194 ), ExtResource( 184 ) ],
+"frames": [ ExtResource( 123 ), ExtResource( 189 ), ExtResource( 217 ), ExtResource( 70 ), ExtResource( 197 ), ExtResource( 198 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 116 ), ExtResource( 129 ), ExtResource( 109 ), ExtResource( 163 ), ExtResource( 131 ), ExtResource( 130 ), ExtResource( 84 ), ExtResource( 146 ), ExtResource( 211 ), ExtResource( 119 ), ExtResource( 117 ), ExtResource( 118 ), ExtResource( 191 ), ExtResource( 86 ), ExtResource( 85 ), ExtResource( 155 ), ExtResource( 147 ), ExtResource( 148 ), ExtResource( 136 ), ExtResource( 126 ), ExtResource( 125 ), ExtResource( 127 ), ExtResource( 166 ), ExtResource( 165 ), ExtResource( 187 ), ExtResource( 176 ), ExtResource( 175 ), ExtResource( 121 ), ExtResource( 120 ), ExtResource( 173 ), ExtResource( 174 ), ExtResource( 151 ), ExtResource( 153 ), ExtResource( 152 ), ExtResource( 149 ), ExtResource( 145 ), ExtResource( 144 ), ExtResource( 182 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 137 ), ExtResource( 138 ) ],
 "loop": true,
-"name": "pickleman",
+"name": "bombado",
 "speed": 5.0
 } ]
 
@@ -661,7 +661,7 @@ z_index = -1
 z_index = 1
 frames = SubResource( 2 )
 animation = "baby"
-frame = 24
+frame = 28
 speed_scale = 2.0
 playing = true
 centered = false
