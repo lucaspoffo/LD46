@@ -16,7 +16,7 @@ func _ready():
 	Event.connect("restart_experiment", self, "_on_Restart")
 	set_injectable(false)
 	_updateLabel()
-	_check_timer_indicator()
+
 
 func _on_Restart():
 	_seconds = 60
@@ -24,7 +24,6 @@ func _on_Restart():
 	$Timer.start()
 	_updateLabel()
 	set_injectable(false)
-	_check_timer_indicator()
 	#TODO: play animation
 	set_ampoules_disabled(false)
 
@@ -43,7 +42,6 @@ func _on_Timer_timeout():
 	_seconds -= 1
 	_updateLabel()
 	_checkTimerExpired()
-	_check_timer_indicator()
 
 func _checkTimerExpired():
 	if _seconds <= 0:
@@ -66,12 +64,11 @@ func _on_Ampoule_pressed(ampoule):
 	if !can_inject:
 		_ampouleError()
 		return
-	if _seconds <= 10:
-		_seconds = 60
-		_updateLabel()
-		Event.emit_signal("ampoule_injected")
-	else:
-		_ampouleError()
+	
+	_seconds = 60
+	_updateLabel()
+	Event.emit_signal("ampoule_injected")
+	
 
 func set_injectable(injectable: bool):
 	can_inject = injectable
@@ -79,9 +76,3 @@ func set_injectable(injectable: bool):
 		$CanInjectIndicator.texture = enabled_indicator
 	else:
 		$CanInjectIndicator.texture = disabled_indicator
-
-func _check_timer_indicator():
-	if _seconds <= 10:
-		$TimerIndicator.texture = enabled_indicator
-	else:
-		$TimerIndicator.texture = disabled_indicator

@@ -54,10 +54,6 @@ margin_top = -130.049
 margin_right = 297.282
 margin_bottom = 8.951
 
-[node name="TimerIndicator" type="Sprite" parent="."]
-position = Vector2( -159.073, 21.725 )
-texture = ExtResource( 4 )
-
 [node name="CanInjectIndicator" type="Sprite" parent="."]
 position = Vector2( 169.334, 22.1676 )
 texture = ExtResource( 4 )
