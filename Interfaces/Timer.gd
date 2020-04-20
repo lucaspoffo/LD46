@@ -28,7 +28,10 @@ func _on_Restart():
 
 func _on_Error_Submit():
 	_seconds -= 5
+	_updateLabel()
 	_checkTimerExpired()
+	# Reset Timer
+	$Timer.start()
 
 func _on_Timer_timeout():
 	_seconds -= 1
