@@ -86,7 +86,7 @@ centered = false
 
 [node name="Alien" type="AnimatedSprite" parent="Capsule"]
 frames = SubResource( 1 )
-frame = 45
+frame = 7
 speed_scale = 2.0
 playing = true
 centered = false
