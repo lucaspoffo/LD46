@@ -1,4 +1,4 @@
-[gd_scene load_steps=231 format=2]
+[gd_scene load_steps=232 format=2]
 
 [ext_resource path="res://Interfaces/Timer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Particles/Bubble3.png" type="Texture" id=2]
@@ -220,6 +220,7 @@
 [ext_resource path="res://Assets/Baby/Baby05.png" type="Texture" id=218]
 [ext_resource path="res://EndGameAnimation.tscn" type="PackedScene" id=219]
 [ext_resource path="res://Assets/Geral/HOLOGRAM_BASE.png" type="Texture" id=220]
+[ext_resource path="res://Assets/Sound/Success.wav" type="AudioStream" id=221]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Light_Blink"
@@ -660,7 +661,7 @@ z_index = -1
 z_index = 1
 frames = SubResource( 2 )
 animation = "baby"
-frame = 45
+frame = 24
 speed_scale = 2.0
 playing = true
 centered = false
@@ -720,5 +721,9 @@ margin_bottom = 1034.18
 rect_scale = Vector2( -1, 1 )
 texture_normal = ExtResource( 17 )
 texture_pressed = ExtResource( 18 )
+
+[node name="SuccessSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 221 )
+pitch_scale = 0.7
 [connection signal="pressed" from="Fib/FibSubmit" to="." method="_on_FibSubmit_pressed"]
 [connection signal="pressed" from="Fib/FibSubmit2" to="." method="_on_FibSubmit_pressed"]

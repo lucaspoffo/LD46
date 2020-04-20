@@ -107,6 +107,7 @@ func on_Puzzle_Completed():
 	# evolve once when resolving both puzzles first time
 	if count == 2 && puzzles_done == 2:
 		evolve()
+		$SuccessSound.play()
 	if count < 2 || puzzles_done == 2:
 		$Timer.set_injectable(true)
 		
@@ -114,6 +115,7 @@ func _on_FibSubmit_pressed():
 	var value = $CentralPanel.v1 * 10 + $CentralPanel.v2
 	if value == fib_sequence[current_fib]:
 		current_fib += 1
+		$SuccessSound.play()
 	else:
 		current_fib = 0
 		Event.emit_signal("error_submit")
@@ -121,17 +123,20 @@ func _on_FibSubmit_pressed():
 		$Fib/FibSubmit.disabled = true
 		$Fib/FibSubmit2.disabled = true
 		evolve()
+		$SuccessSound.play()
 		print("Fibonacci sequence submited")
 
 func _on_TriangleSubmit(value):
 	if value == 13:
 		$CentralPanel.set_triangle_disabled(true)
+		$SuccessSound.play()
 		evolve()
 	else:
 		Event.emit_signal("error_submit")
 	
 func _on_BinarySubmit(value):
 	if value == 27:
+		$SuccessSound.play()
 		$CentralPanel.set_binary_disabled(true)
 		evolve()
 	else:
