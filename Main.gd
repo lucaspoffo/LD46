@@ -140,18 +140,20 @@ func _on_BinarySubmit(value):
 func evolve():
 	stage += 1
 	print("evolving to stage: ", stage)
+	# Fix bubble when evolving to fast
+	if $Capsula/Gosma/BubblesEvolvolution/AnimationPlayer.is_playing():
+		yield($Capsula/Gosma/BubblesEvolvolution/AnimationPlayer, "animation_finished")
 	$Capsula/Gosma/BubblesEvolvolution/AnimationPlayer.play("Transform")
 	#TODO play transformation animation
 	if stage == 5:
 		# Disable all inputs and stop timer
 		$Timer/Timer.stop()
 		get_viewport().gui_disable_input = true
-		#TODO: Play end animation
 
 func change_experiment_animation():
 	if stage_animation.get(stage):
 		$Capsula/Gosma/Alien.play(stage_animation[stage])
 	else:
-		$Capsula/Gosma/Alien.play(stage_animation[4])
+		$Capsula/Gosma/Alien.play(stage_animation[3])
 		$End/EndGameAnimation/AnimationPlayer.play("End")
 		$"/root/Music".stop()
