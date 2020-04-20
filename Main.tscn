@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://Interfaces/Timer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Geral/PLATFORM.png" type="Texture" id=2]
@@ -64,6 +64,7 @@
 [ext_resource path="res://Assets/Personagem/picles13.png" type="Texture" id=62]
 [ext_resource path="res://Assets/Personagem/picles12.png" type="Texture" id=63]
 [ext_resource path="res://Assets/Personagem/picles25.png" type="Texture" id=64]
+[ext_resource path="res://Interfaces/OurButton.tscn" type="PackedScene" id=65]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -86,7 +87,7 @@ centered = false
 
 [node name="Alien" type="AnimatedSprite" parent="Capsule"]
 frames = SubResource( 1 )
-frame = 7
+frame = 29
 speed_scale = 2.0
 playing = true
 centered = false
@@ -131,27 +132,21 @@ margin_right = 974.96
 margin_bottom = 159.747
 text = "1"
 
-[node name="FibSubmit" type="TextureButton" parent="."]
+[node name="FibSubmit" parent="." instance=ExtResource( 65 )]
 margin_left = 458.077
 margin_top = 976.047
-margin_right = 545.077
-margin_bottom = 1037.05
+margin_right = 458.077
+margin_bottom = 976.047
 texture_normal = ExtResource( 17 )
 texture_pressed = ExtResource( 18 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="FibSubmit2" type="TextureButton" parent="."]
+[node name="FibSubmit2" parent="." instance=ExtResource( 65 )]
 margin_left = 1453.3
 margin_top = 973.183
-margin_right = 1540.3
-margin_bottom = 1034.18
+margin_right = 1453.3
+margin_bottom = 973.183
 rect_scale = Vector2( -1, 1 )
 texture_normal = ExtResource( 17 )
 texture_pressed = ExtResource( 18 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 [connection signal="pressed" from="FibSubmit" to="." method="_on_FibSubmit_pressed"]
 [connection signal="pressed" from="FibSubmit2" to="." method="_on_FibSubmit_pressed"]
