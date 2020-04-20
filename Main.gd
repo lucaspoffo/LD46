@@ -14,8 +14,8 @@ var current_fib = 0
 var stage = 0
 var stage_animation := {
 	0: "baby",
-	1: "pickleman",
-	2: "default",
+	1: "default",
+	2: "pickleman",
 	3: "bombado"
 }
 

@@ -1,8 +1,7 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/Puzzle2/Bs32.png" type="Texture" id=1]
 [ext_resource path="res://Interfaces/LightsOut.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Geral/HOLOGRAM_BASE.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Puzzle2/Bs12.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Puzzle2/Rs11.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Puzzle2/Bs13.png" type="Texture" id=6]
@@ -29,11 +28,6 @@ script = ExtResource( 2 )
 [node name="Hologram" type="Sprite" parent="."]
 position = Vector2( 108.83, 182.29 )
 texture = ExtResource( 21 )
-flip_h = true
-
-[node name="Base" type="Sprite" parent="."]
-position = Vector2( 106.109, 352.337 )
-texture = ExtResource( 3 )
 flip_h = true
 
 [node name="Buttons" type="Node2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/Puzzle1/BSquare_4.png" type="Texture" id=1]
 [ext_resource path="res://Interfaces/ButtonPuzzle.gd" type="Script" id=2]
@@ -16,7 +16,6 @@
 [ext_resource path="res://Assets/Puzzle1/ClockRed_Temp.png" type="Texture" id=14]
 [ext_resource path="res://Assets/Puzzle1/Pointer_Temp.png" type="Texture" id=15]
 [ext_resource path="res://Fonts/Exo_60.tres" type="DynamicFont" id=16]
-[ext_resource path="res://Assets/Geral/HOLOGRAM_BASE.png" type="Texture" id=17]
 [ext_resource path="res://Interfaces/OurButton.tscn" type="PackedScene" id=18]
 
 [node name="ButtonPuzzle" type="Node2D"]
@@ -25,10 +24,6 @@ script = ExtResource( 2 )
 [node name="Hologram" type="Sprite" parent="."]
 position = Vector2( 264.682, 146.607 )
 texture = ExtResource( 8 )
-
-[node name="Base" type="Sprite" parent="."]
-position = Vector2( 259.279, 325.761 )
-texture = ExtResource( 17 )
 
 [node name="Switchs" type="Node2D" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=230 format=2]
+[gd_scene load_steps=231 format=2]
 
 [ext_resource path="res://Interfaces/Timer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Particles/Bubble3.png" type="Texture" id=2]
@@ -219,6 +219,7 @@
 [ext_resource path="res://Assets/Bombado/Bombado02.png" type="Texture" id=217]
 [ext_resource path="res://Assets/Baby/Baby05.png" type="Texture" id=218]
 [ext_resource path="res://EndGameAnimation.tscn" type="PackedScene" id=219]
+[ext_resource path="res://Assets/Geral/HOLOGRAM_BASE.png" type="Texture" id=220]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Light_Blink"
@@ -585,11 +586,20 @@ centered = false
 z_index = 5
 texture = ExtResource( 7 )
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Triangle" type="Sprite" parent="."]
 z_index = 4
 texture = ExtResource( 10 )
 centered = false
+
+[node name="HoloBase" type="Sprite" parent="."]
+position = Vector2( 401.69, 948.435 )
+z_index = 5
+texture = ExtResource( 220 )
+flip_h = true
 
 [node name="LightsOut" parent="." instance=ExtResource( 5 )]
 visible = false
@@ -603,6 +613,11 @@ z_index = 5
 [node name="CentralPanel" parent="." instance=ExtResource( 6 )]
 position = Vector2( 960, 981.946 )
 z_index = 5
+
+[node name="HoloBase2" type="Sprite" parent="."]
+position = Vector2( 1570.5, 959.594 )
+z_index = 5
+texture = ExtResource( 220 )
 
 [node name="ButtonPuzzle" parent="." instance=ExtResource( 4 )]
 visible = false
@@ -622,6 +637,9 @@ texture = ExtResource( 66 )
 energy = 0.8
 range_z_min = 0
 range_z_max = 4
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Light2D"]
 anims/Light_Blink = SubResource( 1 )
@@ -646,6 +664,9 @@ frame = 45
 speed_scale = 2.0
 playing = true
 centered = false
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Liquid" type="Sprite" parent="Capsula/Gosma"]
 show_behind_parent = true
