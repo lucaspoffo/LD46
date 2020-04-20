@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://Interfaces/Timer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Particles/Bubble3.png" type="Texture" id=2]
@@ -101,16 +101,80 @@ gradient = SubResource( 3 )
 
 [sub_resource type="ParticlesMaterial" id=5]
 emission_shape = 2
-emission_box_extents = Vector3( 150, 1, 1 )
+emission_box_extents = Vector3( 140, 1, 1 )
 flag_disable_z = true
 direction = Vector3( 0, -100, 0 )
 spread = 0.0
-gravity = Vector3( 0, -8, 0 )
+gravity = Vector3( 0, -220, 0 )
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
-scale = 0.24
+scale = 5.0
 scale_random = 1.0
 color_ramp = SubResource( 4 )
+
+[sub_resource type="Animation" id=9]
+resource_name = "Transform"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:amount")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 40, 1000 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:process_material:gravity")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, -8, 0 ), Vector3( 0, -220, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:lifetime")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 8.0, 2.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:process_material:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.24, 5.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.5, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="Animation" id=6]
 resource_name = "Color_change"
@@ -356,7 +420,7 @@ text = "1"
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 960, 540 )
 texture = ExtResource( 66 )
-energy = 0.0
+energy = 0.8
 range_z_min = 0
 range_z_max = 4
 
@@ -364,7 +428,6 @@ range_z_max = 4
 anims/Light_Blink = SubResource( 1 )
 
 [node name="Capsula" type="Node2D" parent="."]
-position = Vector2( 0, 700 )
 z_index = 1
 
 [node name="Capsule" type="Sprite" parent="Capsula"]
@@ -378,7 +441,7 @@ z_index = -1
 [node name="Alien" type="AnimatedSprite" parent="Capsula/Gosma"]
 z_index = 1
 frames = SubResource( 2 )
-frame = 28
+frame = 49
 speed_scale = 2.0
 playing = true
 centered = false
@@ -392,11 +455,15 @@ centered = false
 [node name="Particles2D" type="Particles2D" parent="Capsula/Gosma"]
 position = Vector2( 964.998, 636.062 )
 z_index = 1
-amount = 40
-lifetime = 10.0
+emitting = false
+amount = 1000
+lifetime = 2.0
 speed_scale = 0.58
 process_material = SubResource( 5 )
 texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Capsula/Gosma/Particles2D"]
+anims/Transform = SubResource( 9 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Color_change = SubResource( 6 )
