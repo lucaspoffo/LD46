@@ -378,7 +378,7 @@ z_index = -1
 [node name="Alien" type="AnimatedSprite" parent="Capsula/Gosma"]
 z_index = 1
 frames = SubResource( 2 )
-frame = 20
+frame = 28
 speed_scale = 2.0
 playing = true
 centered = false

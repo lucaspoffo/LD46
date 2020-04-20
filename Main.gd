@@ -100,6 +100,9 @@ func activate_puzzle(i):
 
 func on_Puzzle_Completed():
 	puzzles_done += 1
+	# evolve once when resolving both puzzles first time
+	if count == 2 && puzzles_done == 2:
+		evolve()
 	if count < 2 || puzzles_done == 2:
 		$Timer.set_injectable(true)
 		
@@ -134,7 +137,8 @@ func evolve():
 	stage += 1
 	print("evolving to stage: ", stage)
 	#TODO play transformation animation
-	if stage == 3:
-		# Disable all inputs
+	if stage == 4:
+		# Disable all inputs and stop timer
+		$Timer/Timer.stop()
 		get_viewport().gui_disable_input = true
 		#TODO: Play end animation
