@@ -8,6 +8,7 @@ export var disabled_indicator: Texture
 var already_error = false
 
 func _ready():
+	$TimerLabel/AnimationPlayer.play("Number")
 	_ampoules = $Ampoules.get_children()
 	set_ampoules_disabled(true)
 	for a in _ampoules:

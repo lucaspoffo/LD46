@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Interfaces/Timer.gd" type="Script" id=1]
 [ext_resource path="res://Interfaces/Ampoule.tscn" type="PackedScene" id=2]
@@ -7,6 +7,35 @@
 [ext_resource path="res://Assets/Geral/TIMER_BASE.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Geral/AMPOLA_LIGHT_OFF.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Geral/TIMER_HOLOGRAM.png" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Number"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -78.5845, -78.453 ), Vector2( -78.5845, -91.3137 ), Vector2( -78.584, -78.453 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:custom_colors/font_outline_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.141176, 0.690196, 0.65098, 1 ), Color( 0.133333, 1, 0.937255, 1 ), Color( 0.141176, 0.690196, 0.65098, 1 ) ]
+}
 
 [node name="Timer" type="Node2D"]
 script = ExtResource( 1 )
@@ -17,11 +46,15 @@ disabled_indicator = ExtResource( 6 )
 autostart = true
 
 [node name="TimerLabel" parent="." instance=ExtResource( 3 )]
-margin_left = -80.1062
+margin_left = -78.5845
 margin_top = -78.453
-margin_right = 87.8938
+margin_right = 89.4155
 margin_bottom = 2.547
+custom_colors/font_outline_modulate = Color( 0.141176, 0.690196, 0.65098, 1 )
 text = "00:00"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TimerLabel"]
+anims/Number = SubResource( 1 )
 
 [node name="Base" type="Sprite" parent="."]
 position = Vector2( 0.656769, -33.2933 )
