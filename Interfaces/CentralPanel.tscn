@@ -17,18 +17,18 @@ script = ExtResource( 1 )
 
 [node name="Add" parent="." instance=ExtResource( 13 )]
 margin_left = -122.127
-margin_top = 39.3268
-margin_right = -122.127
-margin_bottom = 39.3268
+margin_top = 37.3268
+margin_right = -9.12701
+margin_bottom = 91.3268
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 8 )
 pitch_scale = 2.0
 
 [node name="Add2" parent="." instance=ExtResource( 13 )]
 margin_left = 120.231
-margin_top = 39.3267
+margin_top = 37.3267
 margin_right = 233.231
-margin_bottom = 93.3267
+margin_bottom = 91.3267
 rect_scale = Vector2( -1, 1 )
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 8 )
@@ -54,25 +54,25 @@ texture_pressed = ExtResource( 7 )
 pitch_scale = 4.0
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -2.06586, -21.7953 )
+position = Vector2( -2.06586, -10.7953 )
 texture = ExtResource( 2 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( -1.96533, -21.2326 )
+position = Vector2( -1.96533, -15.2326 )
 texture = ExtResource( 5 )
 
 [node name="Label" parent="." instance=ExtResource( 4 )]
 margin_left = -72.7248
-margin_top = -64.0
+margin_top = -58.0
 margin_right = -34.7248
-margin_bottom = 17.0
+margin_bottom = 23.0
 text = "0"
 
 [node name="Label2" parent="." instance=ExtResource( 4 )]
 margin_left = 33.2412
-margin_top = -64.0
+margin_top = -58.0
 margin_right = 71.2412
-margin_bottom = 17.0
+margin_bottom = 23.0
 text = "0"
 
 [node name="Binary" parent="." instance=ExtResource( 13 )]
