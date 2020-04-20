@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=70 format=2]
 
 [ext_resource path="res://Interfaces/Timer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Geral/PLATFORM.png" type="Texture" id=2]
@@ -65,6 +65,7 @@
 [ext_resource path="res://Assets/Personagem/picles12.png" type="Texture" id=63]
 [ext_resource path="res://Assets/Personagem/picles25.png" type="Texture" id=64]
 [ext_resource path="res://Interfaces/OurButton.tscn" type="PackedScene" id=65]
+[ext_resource path="res://Assets/Geral/LIGHT.png" type="Texture" id=66]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -74,56 +75,90 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="Animation" id=2]
+resource_name = "Light"
+length = 8.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1.5, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 4, 8 )
+}
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends AnimationPlayer
+
+
+func _ready():
+	
+	play(\"Light\")
+
+"
+
 [node name="Main" type="Node2D"]
 script = ExtResource( 12 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 963.359, 540.753 )
+position = Vector2( 960, 540 )
 texture = ExtResource( 8 )
 
-[node name="Capsule" type="Sprite" parent="."]
-texture = ExtResource( 3 )
-centered = false
-
-[node name="Alien" type="AnimatedSprite" parent="Capsule"]
+[node name="Alien" type="AnimatedSprite" parent="."]
+z_index = 3
 frames = SubResource( 1 )
-frame = 29
+frame = 21
 speed_scale = 2.0
 playing = true
 centered = false
 
-[node name="Base" type="Sprite" parent="Capsule"]
+[node name="Base" type="Sprite" parent="."]
 show_behind_parent = true
-position = Vector2( -0.0831833, -8.38419 )
+z_index = 2
 texture = ExtResource( 2 )
 centered = false
 
-[node name="Liquid" type="Sprite" parent="Capsule"]
+[node name="Liquid" type="Sprite" parent="."]
 show_behind_parent = true
+z_index = 3
 texture = ExtResource( 9 )
 centered = false
 
+[node name="Capsule" type="Sprite" parent="."]
+z_index = 3
+texture = ExtResource( 3 )
+centered = false
+
 [node name="Panel" type="Sprite" parent="."]
+z_index = 5
 texture = ExtResource( 7 )
 centered = false
 
 [node name="Triangle" type="Sprite" parent="."]
+z_index = 4
 texture = ExtResource( 10 )
 centered = false
 
 [node name="LightsOut" parent="." instance=ExtResource( 5 )]
 visible = false
 position = Vector2( 286.109, 590.528 )
+z_index = 5
 
 [node name="Timer" parent="." instance=ExtResource( 1 )]
 position = Vector2( 961.83, 898.815 )
+z_index = 5
 
 [node name="CentralPanel" parent="." instance=ExtResource( 6 )]
-position = Vector2( 960, 980.946 )
+position = Vector2( 960, 981.946 )
+z_index = 5
 
 [node name="ButtonPuzzle" parent="." instance=ExtResource( 4 )]
 visible = false
 position = Vector2( 1312.85, 628.692 )
+z_index = 5
 
 [node name="ExpirimentLabel" parent="." instance=ExtResource( 13 )]
 margin_left = 942.96
@@ -148,5 +183,18 @@ margin_bottom = 973.183
 rect_scale = Vector2( -1, 1 )
 texture_normal = ExtResource( 17 )
 texture_pressed = ExtResource( 18 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 960, 540 )
+texture = ExtResource( 66 )
+energy = 0.0
+range_z_min = -1
+range_z_max = 2
+range_layer_min = -1
+range_layer_max = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Light2D"]
+anims/Light = SubResource( 2 )
+script = SubResource( 3 )
 [connection signal="pressed" from="FibSubmit" to="." method="_on_FibSubmit_pressed"]
 [connection signal="pressed" from="FibSubmit2" to="." method="_on_FibSubmit_pressed"]
